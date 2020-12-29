@@ -46,7 +46,7 @@ mkdir -p ~/.srcs
 
 # git clone $CLIENT/$FONT 
 cp -r ./fonts/* ~/.local/share/fonts/
-fc-cache
+fc-cache -f
 clear 
 
 # git clone $CLIENT/$WM 
