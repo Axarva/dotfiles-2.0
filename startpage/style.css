@@ -1,0 +1,172 @@
+html{
+  display: flex;
+  flex-flow: row nowrap;  
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background:#263238;
+    }
+
+body {
+  background: #121212;
+  /* background-image: url(/home/axarva/wallpapers/yosemite-lowpoly.jpg); */
+  /* background-position: center; */
+  /* background-size: cover; */
+  color: #ffd5cd;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.bookmark {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bookmarks {
+  display: flex;
+  flex-direction: column;
+  border: #191C1E;
+  border-radius: 3px;
+  box-shadow: 0px 4px 5px #010101;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #212121;
+}
+
+.logo {
+  align-self: center;
+  padding: 15px;
+}
+
+.icon {
+  align-self: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+
+.input_box {
+  border: none;
+  outline: none;
+  background: none;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 422px;
+  color: #ffd5cd;
+  font-size: 22px;
+  border-radius: 0px 0px 0px 0px;
+  height: 70px;
+  text-align: center;
+}
+
+.button {
+  background: none;
+  border: none;
+  transition-duration: 0.6s;
+  position: fixed;
+  padding-left: 11px;
+  padding-right: 12px;
+  height: 70px;
+  opacity: 60%;
+}
+
+.engine {
+  background: none;
+  padding-left: 12px;
+  padding-right: 11px;
+  border: none;
+  transition-duration: 0.6s;
+  position: relative;
+  opacity: 60%;
+}
+
+form {
+  margin: 0px;
+  padding: 0px;
+}
+
+.search_box {
+  display: flex;
+  background: #212122;
+  width: 600px;
+  padding: 0px;
+  margin-bottom: 40px;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0px 4px 5px #010101;
+  align-self: center;
+  height: 70px;
+}
+
+.engine:hover {
+  filter: saturate(150%) brightness(120%) !important;
+  opacity: 100%;
+}
+
+.button:hover {
+  filter: saturate(150%) brightness(120%) !important;
+  opacity: 100%;
+}
+
+li {
+  font-size: 16px;
+  list-style-type: none;
+  padding: 5px;
+  font-family: 'Raleway', sans-serif;
+  /* font-weight: bold; */
+}
+
+a:link {
+  text-decoration: none;
+  color: #ffd5cd;
+}
+
+a:visited {
+  color: #ffd5cd;
+}
+
+
+div.bookmarks.cod a:hover {
+  color: #00CF35;
+}
+
+div.bookmarks.doc a:hover {
+  color: #c47eb7;
+}
+
+div.bookmarks.ent a:hover {
+  color: #90c861;
+}
+
+div.bookmarks.mus a:hover {
+  color:  #84afdb;
+}
+
+div.bookmarks.art a:hover {
+  color: #FF62CE;
+}

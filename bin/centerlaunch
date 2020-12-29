@@ -1,0 +1,20 @@
+#!/bin/zsh
+(~/bin/eww -d &)
+sleep 1
+ ~/bin/eww open blur_full &
+ sleep 1
+ ~/bin/eww open weather &
+ ~/bin/eww open profile &
+ ~/bin/eww open quote &
+ ~/bin/eww open search_full &
+ ~/bin/eww open incognito-icon &
+ ~/bin/eww open vpn-icon &
+ ~/bin/eww open home_dir &
+ ~/bin/eww open screenshot &
+ ~/bin/eww open power_full &
+ ~/bin/eww open reboot_full &
+ ~/bin/eww open lock_full &
+ ~/bin/eww open logout_full &
+ ~/bin/eww open suspend_full &
+
+exit 1

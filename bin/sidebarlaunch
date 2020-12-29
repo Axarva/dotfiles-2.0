@@ -1,0 +1,10 @@
+#!/bin/zsh
+(~/bin/eww -d &)
+sleep 1
+ ~/bin/eww open weather_side &
+ ~/bin/eww open time_side &
+ ~/bin/eww open smol_calendar &
+ ~/bin/eww open player_side &
+ ~/bin/eww open sys_side &
+ ~/bin/eww open sliders_side &
+exit 1

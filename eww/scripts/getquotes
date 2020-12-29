@@ -1,0 +1,7 @@
+#!/bin/bash
+tmp_dir="/tmp/xmonad/quotes"
+
+if [ ! -d $tmp_dir ]; then
+        mkdir -p $tmp_dir
+fi
+curl "https://type.fit/api/quotes" --output $tmp_dir/quotes.json
