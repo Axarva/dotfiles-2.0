@@ -119,7 +119,7 @@
     </def>
     <def name="logout_full">
       <box orientation="h" space-evenly="true">
-        <button class="logout-full" onclick="~/.config/eww/scripts/shutdown.sh"></button>
+        <button class="logout-full" onclick="~/.config/eww/scripts/logout.sh"></button>
       </box>
     </def>
     <def name="close_full">
