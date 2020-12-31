@@ -7,19 +7,28 @@
 -- Normally, you'd only override those defaults you care about.
 --
 import XMonad
-import Data.Monoid
-import System.Exit
-import XMonad.Util.SpawnOnce
-import XMonad.Layout.Spacing
+import XMonad.Layout.Fullscreen
+    ( fullscreenEventHook, fullscreenManageHook, fullscreenSupport, fullscreenFull )
+import Data.Monoid ()
+import System.Exit ()
+import XMonad.Util.SpawnOnce ( spawnOnce )
 import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute, xF86XK_MonBrightnessDown, xF86XK_MonBrightnessUp, xF86XK_AudioPlay, xF86XK_AudioPrev, xF86XK_AudioNext)
-import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.EwmhDesktops ( ewmh )
+import Control.Monad ( join, when )
+import XMonad.Layout.NoBorders
 import XMonad.Hooks.ManageDocks
-import XMonad.Hooks.ManageHelpers
-import XMonad.Layout.Spacing
+    ( avoidStruts, docks, manageDocks, Direction2D(D, L, R, U) )
+import XMonad.Hooks.ManageHelpers ( doFullFloat, isFullscreen )
+import XMonad.Layout.Spacing ( spacingRaw, Border(Border) )
 import XMonad.Layout.Gaps
+    ( Direction2D(D, L, R, U),
+      gaps,
+      setGaps,
+      GapMessage(DecGap, ToggleGaps, IncGap) )
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
+import Data.Maybe (maybeToList)
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
@@ -59,6 +68,22 @@ myWorkspaces    = ["\63083", "\63288", "\63306", "\61723", "\63107", "\63601", "
 --
 myNormalBorderColor  = "#3b4252"
 myFocusedBorderColor = "#bc96da"
+
+addNETSupported :: Atom -> X ()
+addNETSupported x   = withDisplay $ \dpy -> do
+    r               <- asks theRoot
+    a_NET_SUPPORTED <- getAtom "_NET_SUPPORTED"
+    a               <- getAtom "ATOM"
+    liftIO $ do
+       sup <- (join . maybeToList) <$> getWindowProperty32 dpy a_NET_SUPPORTED r
+       when (fromIntegral x `notElem` sup) $
+         changeProperty32 dpy r a_NET_SUPPORTED a propModeAppend [fromIntegral x]
+
+addEWMHFullscreen :: X ()
+addEWMHFullscreen   = do
+    wms <- getAtom "_NET_WM_STATE"
+    wfs <- getAtom "_NET_WM_STATE_FULLSCREEN"
+    mapM_ addNETSupported [wms, wfs]
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -256,11 +281,13 @@ myLayout = avoidStruts(tiled ||| Mirror tiled ||| Full)
 -- To match on the WM_NAME, you can use 'title' in the same way that
 -- 'className' and 'resource' are used below.
 --
-myManageHook = manageDocks <+> (isFullscreen --> doFullFloat) <+> composeAll
+myManageHook = fullscreenManageHook <+> manageDocks <+> composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore
+    , isFullscreen --> doFullFloat
+                                 ]
 
 ------------------------------------------------------------------------
 -- Event handling
@@ -272,6 +299,7 @@ myManageHook = manageDocks <+> (isFullscreen --> doFullFloat) <+> composeAll
 -- combine event hooks use mappend or mconcat from Data.Monoid.
 --
 myEventHook = mempty
+
 
 ------------------------------------------------------------------------
 -- Status bars and logging
@@ -290,21 +318,22 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-	spawnOnce "exec ~/bin/bartoggle"
-	spawnOnce "exec ~/bin/eww -d"
-	spawn "xsetroot -cursor_name left_ptr"
-	--spawnOnce "xwinwrap -ov -ni -fs -- mpv -wid WID --keepaspect=no --loop ~/Downloads/mylivewallpapers.com-Winter-Houses-Sci-Fi-Towers.mp4"
-	spawnOnce "feh --bg-scale ~/wallpapers/yosemite-lowpoly.jpg"
-	spawnOnce "picom -f"
-	spawnOnce "greenclip daemon"
-	spawnOnce "dunst"
+  spawnOnce "flameshot &"
+  spawnOnce "exec ~/bin/bartoggle"
+  spawnOnce "exec ~/bin/eww -d"
+  spawn "xsetroot -cursor_name left_ptr"
+  spawnOnce "feh --bg-scale ~/wallpapers/yosemite-lowpoly.jpg"
+  spawnOnce "picom -f"
+  spawnOnce "greenclip daemon"
+  spawnOnce "dunst"
+  spawn "exec ~/bin/notilisten"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad $ docks $ ewmh defaults
+main = xmonad $ fullscreenSupport $ docks $ ewmh defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -329,10 +358,10 @@ defaults = def {
 
       -- hooks, layouts
         manageHook = myManageHook, 
-	layoutHook = gaps [(L,30), (R,30), (U,40), (D,60)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ myLayout,
+        layoutHook = gaps [(L,30), (R,30), (U,40), (D,60)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ smartBorders $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
-        startupHook        = myStartupHook
+        startupHook        = myStartupHook >> addEWMHFullscreen
     }
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.

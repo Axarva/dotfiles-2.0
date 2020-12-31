@@ -1,0 +1,7 @@
+#!/bin/bash
+string=$1
+match="flameshot"
+if [[ $string == $match ]]; then
+      killall flameshot
+fi
+
