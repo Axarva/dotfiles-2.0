@@ -27,9 +27,9 @@ there already. If you're here, I suppose you want to be cloning this configurati
 
 
 <a id="gal"></a>
-<img src='/screenshots/2020-12-25_21-15.png'>
-<img src='/screenshots/2020-12-25_21-25.png'>
-<img src='/screenshots/2020-12-25_21-25_1.png'>
+<img src='/screenshots/sidebar.png'>
+<img src='/screenshots/firefox.png'>
+<img src='/screenshots/center.png'>
 
 <a id="inst"></a>
 ## Installation
