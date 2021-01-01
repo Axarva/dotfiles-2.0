@@ -15,9 +15,9 @@ fi
 # If you dunno, head to openweathermap.org, and make and account 
 #(completely free I swear, and then get your API Key and  your City ID)
 # I wish I was smart enough to do it like Elena, but this is the top I could do lol
-KEY="510001cdb4f3de2c43e915e5f3858c60"
-ID="1283240"
-UNIT="metric" #Options are 'metric' and 'imperial'
+KEY="API_KEY_HERE"
+ID="CITY_ID_HERE"
+UNIT="UNIT" #Options are 'metric' and 'imperial'
 weather=$(curl -sf "http://api.openweathermap.org/data/2.5/weather?APPID="$KEY"&id="$ID"&units="$UNIT"")
 echo $weather
 if [ ! -z "$weather" ]; then
