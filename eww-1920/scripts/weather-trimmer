@@ -1,0 +1,9 @@
+#!/bin/bash
+weather=$(cat /tmp/xmonad/weather/weather-stat)
+weather_count=$(cat /tmp/xmonad/weather/weather-stat | wc -c)
+
+if [ "$weather_count" -lt 10 ]; then
+	echo $weather;
+else 
+	echo $(cat /tmp/xmonad/weather/weather-stat | cut -c1-6)...
+fi
