@@ -1,0 +1,3 @@
+#!/bin/zsh
+#Works only with zsh, I had bad experiences with bash. Feel free to modify for bash!
+echo $(cat /tmp/xmonad/weather/weather-quote) | tail -n1
