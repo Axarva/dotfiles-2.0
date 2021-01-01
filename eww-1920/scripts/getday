@@ -1,0 +1,20 @@
+#!/bin/bash
+day_num=$(date "+%u")
+
+if [ $day_num == 1 ]; then
+	day="Monday"
+elif [ $day_num == 2 ]; then
+	day="Tuesday"
+elif [ $day_num == 3 ]; then
+	day="Wednesday"
+elif [ $day_num == 4 ]; then
+	day="Thursday"
+elif [ $day_num == 5 ]; then
+	day="Friday"
+elif [ $day_num == 6 ]; then
+	day="Saturday"
+else
+	day="Sunday"
+fi
+echo $day;
+
