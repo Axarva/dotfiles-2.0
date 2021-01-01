@@ -182,19 +182,18 @@ mkdir -p ~/.config/
     
 
 # done 
-echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your dm" > ~/Note.txt
-echo "run 'p10k configure' to set up your zsh" >> ~/Note.txt
-echo "after you this -> 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \${ZSH_CUSTOM:-\$HOME/.oh-my-zsh/custom}/themes/powerlevel10k'" >> ~/Note.txt
+echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your dm" | tee ~/Note.txt
+echo "run 'p10k configure' to set up your zsh" | tee -a ~/Note.txt
+echo "after you this -> 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \${ZSH_CUSTOM:-\$HOME/.oh-my-zsh/custom}/themes/powerlevel10k'" | tee -a ~/Note.txt
 printf "\n" >> ~/Note.txt
-echo "Please add: export PATH='\$PATH:/home/{Your_user}/bin' to your .zshrc if not done already. Replace {Your_user} with your username." >> ~/Note.txt
-echo "For startpage, copy the startpage directory into wherever you want, and set it as new tab in firefox settings." >> ~/Note.txt
-echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" >> ~/Note.txt
-echo "ALL DONE! Issue `xmonad --recompile` and then re-login for all changes to take place!" >> ~/Note.txt
-echo "Make sure your default shell is ZSH too..." >> ~/Note.txt
-echo "Open issues on github or ask me on discord or whatever if you face issues." >> ~/Note.txt
-echo "Install Museo Sans as well. Frome Adobe I believe." >> ~/Note.txt
-echo "If the bar doesn't work, use tint2conf and set stuff up, if you're hopelessly lost(which you probably are not), open an issue." >> ~/Note.txt
-cat ~/Note.txt;
+echo "Please add: export PATH='\$PATH:/home/{Your_user}/bin' to your .zshrc if not done already. Replace {Your_user} with your username." | tee -a ~/Note.txt
+echo "For startpage, copy the startpage directory into wherever you want, and set it as new tab in firefox settings." | tee -a ~/Note.txt
+echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" | tee -a ~/Note.txt
+echo "ALL DONE! Issue `xmonad --recompile` and then re-login for all changes to take place!" | tee -a ~/Note.txt
+echo "Make sure your default shell is ZSH too..." | tee -a ~/Note.txt
+echo "Open issues on github or ask me on discord or whatever if you face issues." | tee -a ~/Note.txt
+echo "Install Museo Sans as well. Frome Adobe I believe." | tee -a ~/Note.txt
+echo "If the bar doesn't work, use tint2conf and set stuff up, if you're hopelessly lost(which you probably are not), open an issue." | tee -a ~/Note.txt
 echo "These instructions have been saved to ~/Note.txt. Make sure to go through them."
 
 
