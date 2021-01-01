@@ -89,6 +89,16 @@ Respectively.
 - `doas reboot` with `systemctl reboot`
 - `doas poweroff` with  `systemctl poweroff`
 
+These references occur in the following files:
+- bin/powermenu.sh
+- eww*/scripts/shutdown.sh
+- eww*/scripts/reboot.sh
+- eww*/scripts/suspend.sh
+
+`doas` references:
+- eww*/scripts/getvpnstat (You probably won't be using protonvpn, so you could just ignore this as well.)
+- eww*/scripts/shutdown.sh
+- eww*/scripts/reboot.sh
 
 <a id="arch"></a>
 
