@@ -1,0 +1,2 @@
+#!/bin/bash
+maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send "Screenshot" "Saved to Desktop" -i flameshot

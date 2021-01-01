@@ -115,7 +115,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                    xF86XK_MonBrightnessDown), spawn "brightnessctl s 10-%")
  
     -- Screenshot
-    , ((0,                    xK_Print), spawn "flameshot gui -p ~/Desktop")
+    , ((0,                    xK_Print), spawn "~/bin/maimcopy")
+    , ((modm,                 xK_Print), spawn "~/bin/maimsave")
 
     -- My Stuff
     , ((modm,               xK_b     ), spawn "exec ~/bin/bartoggle")
@@ -318,7 +319,6 @@ myLogHook = return ()
 --
 -- By default, do nothing.
 myStartupHook = do
-  spawnOnce "flameshot &"
   spawnOnce "exec ~/bin/bartoggle"
   spawnOnce "exec ~/bin/eww -d"
   spawn "xsetroot -cursor_name left_ptr"
@@ -326,7 +326,6 @@ myStartupHook = do
   spawnOnce "picom -f"
   spawnOnce "greenclip daemon"
   spawnOnce "dunst"
-  spawn "exec ~/bin/notilisten"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
