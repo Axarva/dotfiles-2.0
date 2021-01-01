@@ -159,7 +159,7 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    tint2 (Install using package manager, other binary from my fork is provided)
 -    acpi
 -    Museo Sans Font by Adobe (I think it needs some sort of acount, but get it) Or just search for it on the web and get it somewhere
--    Any Nerd Font, Iosevka recommended along with Hurmit. [Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)
+-    ~~Any Nerd Font, Iosevka recommended along with Hurmit.~~ Nerd Fonts now included in folder.[Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) 
 -    playerctl
 -    brightnessctl. [Link](https://github.com/Hummer12007/brightnessctl)
 -    OpenRC (Wait a sec, yep, remember to edit the powermenu files if you use systemd)
@@ -174,6 +174,8 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    picom (fork of ibhagwan or jonaburg)
 -    doas- wait, just replace doas occurences with sudo, or go macho and install doas
 -    jq: Command line json parser (Needed for widgets)
+-    maim and xclip for screenshots
+-    mpv for low-battery sound playing (Not exactly necessary, you'll get the notification, but the sound depends on it.)
 -    *Might need to be updated, so please tell me*
 
 <a id="trouble"></a>
