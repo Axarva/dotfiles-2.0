@@ -30,13 +30,27 @@ case $conti in
         echo "Installing rofi configs..."
         mkdir ~/.config/rofi && cp -r ./rofi/* ~/.config/rofi;
     fi
+    sleep 5
+    echo "1)1366 x 768       2)1920 x 1080"
+    read -r -p "Choose your screen resolution: " res
+    case $res in
+    [1])
+        EWW_DIR='eww-1366'
+        ;;
+    [2])
+        EWW_DIR='eww-1920'
+        ;;
+    [*])
+        EWW_DIR='eww-1366'
+        ;;
+    esac
     if [ -d ~/.config/eww ]; then
         echo "Eww configs detected, backing up..."
         mkdir ~/.config/eww.old && mv ~/.config/eww/* ~/.config/eww.old/
-        cp -r ./eww/* ~/.config/eww;
+        cp -r ./$EWW_DIR/* ~/.config/eww;
     else
         echo "Installing eww configs..."
-        mkdir ~/.config/eww && cp -r ./eww/* ~/.config/eww;
+        mkdir ~/.config/eww && cp -r ./$EWW_DIR/* ~/.config/eww;
     fi
     if [ -f ~/.config/picom.conf ]; then
         echo "Picom configs detected, backing up..."
