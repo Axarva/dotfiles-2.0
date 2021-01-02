@@ -1,3 +1,7 @@
+* {
+  all: unset;
+}
+
 window {
   background-color: #121212;
 /*  background-color: #000000; */
@@ -6,6 +10,7 @@ window {
 }
 
 button {
+  all: unset;
   background-color: #121212;
   padding: 10px;
 }
