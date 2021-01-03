@@ -201,4 +201,9 @@ And here we are:
 5. Fonts: GET THOSE FONTS!
 6. **MAKE SURE YOUR `~/bin` DIRECTORY IS INSIDE YOUR PATH, OR NOTHING WILL WORK!** (Yes. Absolutely needs to be shouty capitals.)
 7. Anything else? Open up an issue.
+8. Workspace indicator bar lost colors: This has a very long explanation, but the fix is as follows:
+   - Open up the `~/.config/tint2/workspaces.tint2rc` file, and scroll down to the taskbar module at around line 120
+   - Add this line in that block: `taskbar_name_unoccupied_font_color = #ffd5cd 100`
+   - Save the file, and refresh the bar with hitting the keybind `Win + B` twice.
+   - Remember not to edit that particular file with `tint2conf`, or you'll have to do this again!
 # Good Luck and Cheers!
