@@ -133,8 +133,8 @@
           <box class="pfp"></box>
         </box>
         <box orientation="v" space-evenly="false"> 
-          <box class="pfptxt" valign="center">Axarva</box>
-          <box class="subpfptxt" halign="center">Pengus</box>
+          <box class="pfptxt" valign="center">*Insert-name-here*</box>
+          <box class="subpfptxt" halign="center">*Insert-cheeky-line-here*</box>
         </box>
       </box>
     </def>

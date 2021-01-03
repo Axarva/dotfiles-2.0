@@ -133,8 +133,8 @@
           <box class="pfp"></box>
         </box>
         <box orientation="v" space-evenly="false"> 
-          <box class="pfptxt" valign="center">Prastab</box>
-          <box class="subpfptxt" halign="center">Coder</box>
+          <box class="pfptxt" valign="center">*Insert-Name-Here*</box>
+          <box class="subpfptxt" halign="center">*Some-cheeky-line*</box>
         </box>
       </box>
     </def>
