@@ -93,7 +93,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
-    -- launch dmenu
+    -- launch rofi and dashboard
     , ((modm,               xK_o     ), spawn "~/bin/launcher.sh")
     , ((modm,               xK_p     ), spawn "~/bin/centerlaunch")
     , ((modm .|. shiftMask, xK_p     ), spawn "exec ~/bin/ewwclose")
@@ -320,7 +320,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
   spawnOnce "exec ~/bin/bartoggle"
-  spawnOnce "exec ~/bin/eww -d"
+  spawnOnce "exec ~/bin/eww daemon"
   spawn "xsetroot -cursor_name left_ptr"
   spawnOnce "feh --bg-scale ~/wallpapers/yosemite-lowpoly.jpg"
   spawnOnce "picom -f"
