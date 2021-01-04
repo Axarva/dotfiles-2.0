@@ -20,6 +20,7 @@ Made after an evolution
 - *Insert more stuff here*
 
 
+Workflow Video: https://www.youtube.com/watch?v=rMoUCnqhYfs 
 
 Hello! Thank you for dropping by! These are my xmonad configurations, made after I went through... no, let's stop that 
 there already. If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. Even if you're not, just look through the gallery:
