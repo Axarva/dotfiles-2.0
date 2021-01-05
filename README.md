@@ -105,7 +105,7 @@ These references occur in the following files:
 <a id="arch"></a>
 
 ### For Arch Linux and it's derivatives (make sure you have git installed):
-**Piece of good advice**: Since you are on an Arch-based distro, it is likely you use `systemd`. In case you don't go ahead and ignore this and skip to [Going Ahead: Arch Edition](#ga-arch).
+**Piece of good advice**: Since you are on an Arch-based distro, it is likely you use `systemd`. In case you don't, go ahead and ignore this and skip to [Going Ahead: Arch Edition](#ga-arch).
 
 
 In case you do, I recommend opening this repository in a text editor after you clone it, and global-replace the stuff specified in [Stuff for sysd users](#sysd-replace). After that, go ahead with [Going Ahead: Arch Edition](#ga-arch).
@@ -138,7 +138,7 @@ AND DON'T FORGET TO READ WHAT'S WRITTEN AT THE END OF THE MAIN INSTALLATION SECT
 ### For Gentoo Linux users (And basically any other distro):
 I'm sorry guys, I couldn't do it. I'm having a mental breakdown rn.
 
-**Piece of good advice**:  If you don't use `systemd` go ahead and ignore this and skip to [Going ahead: Others Edition](#ga-other).
+**Piece of good advice**:  If you don't use `systemd`, go ahead and ignore this, and skip to [Going ahead: Others Edition](#ga-other).
 
 
 
@@ -171,7 +171,7 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    tint2 (Install using package manager, other binary from my fork is provided)
 -    acpi
 -    Museo Sans Font by Adobe (I think it needs some sort of acount, but get it) Or just search for it on the web and get it somewhere
--    ~~Any Nerd Font, Iosevka recommended along with Hurmit.~~ Nerd Fonts now included in folder.[Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) 
+-    ~~Any Nerd Font, Iosevka recommended along with Hurmit.~~ Nerd Fonts now included in folder. [Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) 
 -    playerctl
 -    brightnessctl. [Link](https://github.com/Hummer12007/brightnessctl)
 -    OpenRC (Wait a sec, yep, remember to edit the powermenu files if you use systemd)
