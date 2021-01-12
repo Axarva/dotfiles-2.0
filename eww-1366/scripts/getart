@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 tmp_dir="/tmp/xmonad/spotify"
 tmp_cover_path=$tmp_dir/cover.png
 
