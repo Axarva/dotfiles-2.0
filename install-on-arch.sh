@@ -186,7 +186,7 @@ echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your dm" | tee ~/Note.txt
 echo "run 'p10k configure' to set up your zsh" | tee -a ~/Note.txt
 echo "after you this -> 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \${ZSH_CUSTOM:-\$HOME/.oh-my-zsh/custom}/themes/powerlevel10k'" | tee -a ~/Note.txt
 printf "\n" >> ~/Note.txt
-echo "Please add: export PATH='\$PATH:/home/{Your_user}/bin' to your .zshrc if not done already. Replace {Your_user} with your username." | tee -a ~/Note.txt
+echo "Please add: export PATH='$PATH:/home/{Your_user}/bin' to your .zshrc if not done already. Replace {Your_user} with your username." | tee -a ~/Note.txt
 echo "For startpage, copy the startpage directory into wherever you want, and set it as new tab in firefox settings." | tee -a ~/Note.txt
 echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" | tee -a ~/Note.txt
 echo "ALL DONE! Issue 'xmonad --recompile' and then re-login for all changes to take place!" | tee -a ~/Note.txt
