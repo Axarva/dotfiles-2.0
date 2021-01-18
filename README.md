@@ -2,6 +2,7 @@
 Made after an evolution
 ## Table of Contents
 - [About](#about)
+- [Workflow](#workflow)
 - [Gallery](#gal)
 - [Installation](#inst)
   - [Arch Install](#arch)
@@ -19,8 +20,13 @@ Made after an evolution
 - tint2
 - *Insert more stuff here*
 
+<a id="workflow"></a>
 
-Workflow Video: https://www.youtube.com/watch?v=rMoUCnqhYfs 
+## Workflow
+Workflow GIF: (This is a short one, for more goodies look at the link below)
+![](https://github.com/Axarva/gifs/blob/master/workflow.gif)
+
+Workflow Video by SavvyNik: https://www.youtube.com/watch?v=rMoUCnqhYfs 
 
 Hello! Thank you for dropping by! These are my xmonad configurations, made after I went through... no, let's stop that 
 there already. If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. Even if you're not, just look through the gallery:
