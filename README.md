@@ -54,7 +54,7 @@ Note: Whatever method you follow, if you want the weather and quote features to 
 
 ```
 0,30 * * * * /home/{Your-username}/.config/eww/scripts/getweather
-@reboot sleep 10 && /home/{Your-username}/.config/eww/scripts/getquotes
+@reboot /home/{Your-username}/.config/eww/scripts/getquotes
 ```
 
 
