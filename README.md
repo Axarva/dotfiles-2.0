@@ -28,9 +28,12 @@ Workflow GIF: (This is a short one, for more goodies look at the link below)
 (Also, compression made it look kinda bad, but I think it shows what it needs to)
 
 
-![](https://github.com/Axarva/gifs/blob/main/workflow.gif)
+<p align="center">
+  <img src="https://github.com/Axarva/gifs/blob/main/workflow.gif">
+</p>
 
 Workflow Video by SavvyNik: https://www.youtube.com/watch?v=rMoUCnqhYfs 
+
 
 Hello! Thank you for dropping by! These are my xmonad configurations, made after I went through... no, let's stop that 
 there already. If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. Even if you're not, just look through the gallery:
