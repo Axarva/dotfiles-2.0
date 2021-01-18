@@ -2,8 +2,8 @@
 Made after an evolution
 ## Table of Contents
 - [About](#about)
-- [Workflow](#workflow)
 - [Gallery](#gal)
+- [Workflow](#workflow)
 - [Installation](#inst)
   - [Arch Install](#arch)
   - [Other Install](#other)
@@ -20,6 +20,17 @@ Made after an evolution
 - tint2
 - *Insert more stuff here*
 
+
+Hello! Thank you for dropping by! These are my xmonad configurations, made after I went through... no, let's stop that 
+there already. If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. Even if you're not, just look through the gallery:
+
+
+
+<a id="gal"></a>
+<img src='/screenshots/sidebar.png'>
+<img src='/screenshots/firefox.png'>
+<img src='/screenshots/center.png'>
+
 <a id="workflow"></a>
 
 ## Workflow
@@ -34,16 +45,6 @@ Workflow GIF: (This is a short one, for more goodies look at the link below)
 
 Workflow Video by SavvyNik: https://www.youtube.com/watch?v=rMoUCnqhYfs 
 
-
-Hello! Thank you for dropping by! These are my xmonad configurations, made after I went through... no, let's stop that 
-there already. If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. Even if you're not, just look through the gallery:
-
-
-
-<a id="gal"></a>
-<img src='/screenshots/sidebar.png'>
-<img src='/screenshots/firefox.png'>
-<img src='/screenshots/center.png'>
 
 <a id="inst"></a>
 ## Installation
