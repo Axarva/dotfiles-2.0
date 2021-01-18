@@ -24,7 +24,7 @@ Made after an evolution
 
 ## Workflow
 Workflow GIF: (This is a short one, for more goodies look at the link below)
-![](https://github.com/Axarva/gifs/blob/master/workflow.gif)
+![](https://github.com/Axarva/gifs/blob/main/workflow.gif)
 
 Workflow Video by SavvyNik: https://www.youtube.com/watch?v=rMoUCnqhYfs 
 
