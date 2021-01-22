@@ -4,6 +4,7 @@ Made after an evolution
 - [About](#about)
 - [Gallery](#gal)
 - [Workflow](#workflow)
+- [Keybinds](#keybinds)
 - [Installation](#inst)
   - [Arch Install](#arch)
   - [Other Install](#other)
@@ -18,6 +19,8 @@ Made after an evolution
 - firefox
 - rofi
 - tint2
+- Inhibitors (Inhibitors are cool stuff that prevent auto screen lock when you're watching a video or something)
+- Healthy stuff (Yeah, you get notifications to fix your posture and take a break)
 - *Insert more stuff here*
 
 
@@ -44,6 +47,33 @@ Workflow GIF: (This is a short one, for more goodies look at the link below)
 </p>
 
 Workflow Video by SavvyNik: https://www.youtube.com/watch?v=rMoUCnqhYfs 
+
+
+<a id="keybinds"></a>
+## Keybinds 
+
+These are the basic keybinds. Read the `xmonad/xmonad.hs` for more keybinds like increasing gaps and restoring gaps.
+
+|        Keybind         |                 Function                 |
+| ---------------------- | ---------------------------------------- |
+| `Win + Shift + Enter`  | Launch terminal (alacritty)              |
+| `Win + Shift + C`      | Close window                             |
+| `Win + O`              | Open rofi menu                           |
+| `Win + Shift + Q`      | Open rofi powermenu                      |
+| `Win + S`              | Open sidebar                             |
+| `Win + Shift + S`      | Close sidebar                            |
+| `Win + P`              | Open dashboard                           |
+| `Win + Shift + P`      | Close dashboard                          |
+| `Win + B`              | Toggle the main bars                     |
+| `Win + Z`              | Activate inhibitor (Stops autolocking)   |
+| `Win + Shift + Z`      | Dectivate inhibitor (Enable Autolocking) |
+| `Win + Ctrl + G`       | Toggle gaps (toggle to get screen space) |
+| `Win + J`              | Navigate through windows                 |
+| `Win + K`              | Navigate through windows                 |
+| `Win + Space`          | Switch through layouts                   |
+| `Win + T`              | Make a floating window tiled             |
+
+Note: `Toggling` means to enable if inactive or to disable if active.
 
 
 <a id="inst"></a>
