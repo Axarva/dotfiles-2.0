@@ -120,8 +120,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- My Stuff
     , ((modm,               xK_b     ), spawn "exec ~/bin/bartoggle")
-    , ((modm,               xK_z     ), spawn "exec ~/bin/foo.sh")
-    , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/unfoo.sh")
+    , ((modm,               xK_z     ), spawn "exec ~/bin/inhibit_activate")
+    , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/inhibit_deactivate")
     , ((modm .|. shiftMask, xK_a     ), spawn "exec ~/bin/clipboardy")
 
     -- close focused window
