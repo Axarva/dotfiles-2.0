@@ -52,7 +52,7 @@ Workflow Video by SavvyNik: https://www.youtube.com/watch?v=rMoUCnqhYfs
 <a id="keybinds"></a>
 ## Keybinds 
 
-These are the basic keybinds. Read the `xmonad/xmonad.hs` for more keybinds like increasing gaps and restoring gaps.
+These are the basic keybinds. Read through the `xmonad/xmonad.hs` file for more keybinds like increasing gaps and restoring gaps.
 
 |        Keybind         |                 Function                 |
 | ---------------------- | ---------------------------------------- |
