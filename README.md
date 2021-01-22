@@ -66,7 +66,7 @@ These are the basic keybinds. Read through the `xmonad/xmonad.hs` file for more 
 | `Win + Shift + P`      | Close dashboard                          |
 | `Win + B`              | Toggle the main bars                     |
 | `Win + Z`              | Activate inhibitor (Stops autolocking)   |
-| `Win + Shift + Z`      | Dectivate inhibitor (Enable Autolocking) |
+| `Win + Shift + Z`      | Dectivate inhibitor (Enables autolocking)|
 | `Win + Ctrl + G`       | Toggle gaps (toggle to get screen space) |
 | `Win + J`              | Navigate through windows                 |
 | `Win + K`              | Navigate through windows                 |
