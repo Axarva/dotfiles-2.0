@@ -1,5 +1,5 @@
 # Dotfiles: 2.0
-Made after an evolution
+*Going brr...*
 ## Table of Contents
 - [About](#about)
 - [Gallery](#gal)
@@ -24,8 +24,8 @@ Made after an evolution
 - *Insert more stuff here*
 
 
-Hello! Thank you for dropping by! These are my xmonad configurations, made after I went through... no, let's stop that 
-there already. If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. Even if you're not, just look through the gallery:
+Hello! Thank you for dropping by! These are my xmonad configurations, and they go brr! (Let's stop that 
+there). If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. Even if you're not, just look through the gallery:
 
 
 
