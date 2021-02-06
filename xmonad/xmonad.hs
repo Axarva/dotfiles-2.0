@@ -93,6 +93,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
+    -- lock screen
+    , ((modm,               xK_F1    ), spawn "betterlockscreen -l")
+
     -- launch rofi and dashboard
     , ((modm,               xK_o     ), spawn "~/bin/launcher.sh")
     , ((modm,               xK_p     ), spawn "~/bin/centerlaunch")
@@ -366,7 +369,7 @@ defaults = def {
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
 help :: String
-help = unlines ["The default modifier key is 'alt'. Default keybindings:",
+help = unlines ["The default modifier key is 'super'. Default keybindings:",
     "",
     "-- launching and killing programs",
     "mod-Shift-Enter  Launch xterminal",

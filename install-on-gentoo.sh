@@ -63,7 +63,7 @@ case $conti in
     if [ -f ~/.config/alacritty.yml ]; then
         echo "Alacritty configs detected, backing up..."
         cp ~/.config/alacritty.yml ~/.config/alacritty.yml.old;
-        cp ./alacritty.yml ~/.config/alacritty.yml;
+        cp ./alacritty.yml.stable ~/.config/alacritty.yml;
     else
         echo "Installing alacritty configs..."
          cp ./alacritty.yml ~/.config/alacritty.yml;
