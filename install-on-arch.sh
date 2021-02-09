@@ -135,7 +135,7 @@ mkdir -p ~/.config/
         cp ./alacritty.yml.arch ~/.config/alacritty.yml;
     else
         echo "Installing alacritty configs..."
-         cp ./alacritty.yml ~/.config/alacritty.yml;
+         cp ./alacritty.yml.arch ~/.config/alacritty.yml;
     fi
     if [ -d ~/.config/dunst ]; then
         echo "Dunst configs detected, backing up..."
