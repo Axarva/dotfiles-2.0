@@ -74,6 +74,8 @@ These are the basic keybinds. Read through the `xmonad/xmonad.hs` file for more 
 | `Win + T`              | Make a floating window tiled             |
 
 Note: `Toggling` means to enable if inactive or to disable if active.
+
+
 Note: `Win` refers to the `Super` key.
 
 
