@@ -25,23 +25,23 @@ case $conti in
     if [ -d ~/.config/rofi ]; then
         echo "Rofi configs detected, backing up..."
         mkdir -p ~/.config/rofi.old && mv ~/.config/rofi/* ~/.config/rofi.old/
-        cp -r ./rofi/* ~/.config/rofi;
+        cp -r ./config/rofi/* ~/.config/rofi;
     else
         echo "Installing rofi configs..."
-        mkdir ~/.config/rofi && cp -r ./rofi/* ~/.config/rofi;
+        mkdir ~/.config/rofi && cp -r ./config/rofi/* ~/.config/rofi;
     fi
     sleep 5
     echo "1)1366 x 768       2)1920 x 1080"
     read -r -p "Choose your screen resolution: " res
     case $res in
     [1])
-        EWW_DIR='eww-1366'
+        EWW_DIR='config/eww-1366'
         ;;
     [2])
-        EWW_DIR='eww-1920'
+        EWW_DIR='config/eww-1920'
         ;;
     [*])
-        EWW_DIR='eww-1366'
+        EWW_DIR='config/eww-1366'
         ;;
     esac
     if [ -d ~/.config/eww ]; then
@@ -55,26 +55,26 @@ case $conti in
     if [ -f ~/.config/picom.conf ]; then
         echo "Picom configs detected, backing up..."
         cp ~/.config/picom.conf ~/.config/picom.conf.old;
-        cp ./picom.conf ~/.config/picom.conf;
+        cp ./config/picom.conf ~/.config/picom.conf;
     else
         echo "Installing picom configs..."
-         cp ./picom.conf ~/.config/picom.conf;
+         cp ./config/picom.conf ~/.config/picom.conf;
     fi
     if [ -f ~/.config/alacritty.yml ]; then
         echo "Alacritty configs detected, backing up..."
         cp ~/.config/alacritty.yml ~/.config/alacritty.yml.old;
-        cp ./alacritty.yml.stable ~/.config/alacritty.yml;
+        cp ./config/alacritty.yml.stable ~/.config/alacritty.yml;
     else
         echo "Installing alacritty configs..."
-         cp ./alacritty.yml.stable ~/.config/alacritty.yml;
+         cp ./config/alacritty.yml.stable ~/.config/alacritty.yml;
     fi
     if [ -d ~/.config/dunst ]; then
         echo "Dunst configs detected, backing up..."
         mkdir ~/.config/dunst.old && mv ~/.config/dunst/* ~/.config/dunst.old/
-        cp -r ./dunst/* ~/.config/dunst;
+        cp -r ./config/dunst/* ~/.config/dunst;
     else
         echo "Installing dunst configs..."
-        mkdir ~/.config/dunst && cp -r ./dunst/* ~/.config/dunst;
+        mkdir ~/.config/dunst && cp -r ./config/dunst/* ~/.config/dunst;
     fi
     if [ -d ~/wallpapers ]; then
         echo "Adding wallpaper to ~/wallpapers..."
@@ -86,10 +86,10 @@ case $conti in
     if [ -d ~/.config/tint2 ]; then
         echo "Tint2 configs detected, backing up..."
         mkdir ~/.config/tint2.old && mv ~/.config/tint2/* ~/.config/tint2.old/
-        cp -r ./tint2/* ~/.config/tint2;
+        cp -r ./config/tint2/* ~/.config/tint2;
     else
         echo "Installing tint2 configs..."
-        mkdir ~/.config/tint2 && cp -r ./tint2/* ~/.config/tint2;
+        mkdir ~/.config/tint2 && cp -r ./config/tint2/* ~/.config/tint2;
     fi
     if [ -d ~/.xmonad ]; then
         echo "XMonad configs detected, backing up..."
@@ -104,7 +104,7 @@ case $conti in
         mkdir ~/bin.old && mv ~/bin/* ~/bin.old/
         cp -r ./bin/* ~/bin;
     else
-        echo "Installing bin configs..."
+        echo "Installing bin scripts..."
         mkdir ~/bin && cp -r ./bin/* ~/bin/;
     fi
     printf "\n"
