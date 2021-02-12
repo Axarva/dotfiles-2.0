@@ -1,4 +1,5 @@
 #!/bin/env bash
+set -e
 
 echo "Welcome!" && sleep 2
 

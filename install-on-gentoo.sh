@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 echo "Welcome!"
 echo "Warning! Have you installed the dependencies already? If not, please do so before continuing or stuff wont work!"
 echo "Dependencies are mentioned in README. Here they are anyways:"
