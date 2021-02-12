@@ -1,5 +1,5 @@
 # Dotfiles: 2.0
-*Going brr...*
+Widgets go brr!
 ## Table of Contents
 - [About](#about)
 - [Gallery](#gal)
