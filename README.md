@@ -4,10 +4,10 @@
 
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/Axarva/dotfiles-2.0?style=for-the-badge">
-  <img src="https://img.shields.io/github/issues/Axarva/dotfiles-2.0?color=pint&style=for-the-badge">
-  <img src="https://img.shields.io/github/forks/Axarva/dotfiles-2.0?color=violet&style=for-the-badge">
-  <img src="https://img.shields.io/badge/license-MIT-orange.svg?style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/Axarva/dotfiles-2.0?color=ffd5cd&style=for-the-badge&logo=starship">
+  <img src="https://img.shields.io/github/issues/Axarva/dotfiles-2.0?color=d35d6e&style=for-the-badge&logo=codecov">
+  <img src="https://img.shields.io/github/forks/Axarva/dotfiles-2.0?color=84afdb&style=for-the-badge&logo=jfrog-bintray">
+  <img src="https://img.shields.io/badge/license-MIT-orange.svg?color=90c861&style=for-the-badge&logo=mitsubishi">
 </p>
 
 ## Table of Contents
@@ -16,7 +16,7 @@
 
 
 - [About ⁉️](#about)
-- [Gallery 🎞️](#gal)
+- [Gallery 📷](#gal)
 - [Workflow 🖨️](#workflow)
 - [Keybinds ✍️](#keybinds)
 - [Installation 🤵‍](#inst)
@@ -44,7 +44,7 @@ These are my xmonad configurations, and they go brr! 🚀 (Let's stop that there
 
 If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. 👇 
 
-Even if you're not, just look through the gallery 🎞️ :
+Even if you're not, just look through the gallery 📷:
 
 
 
