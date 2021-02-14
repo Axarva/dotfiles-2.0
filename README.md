@@ -12,7 +12,7 @@
 
 ## Table of Contents
 
-<img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="400px">
+<img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="180vh">
 
 
 - [About ⁉️](#about)
