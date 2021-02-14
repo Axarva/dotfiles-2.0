@@ -37,7 +37,7 @@ there). If you're here, I suppose you want to be cloning this configuration, for
 <a id="workflow"></a>
 
 ## Workflow
-Workflow GIF: (This is a short one, for more goodies look at the link below)
+Workflow GIF: (This is a short one, for more goodies look at the links below)
 
 (Also, compression made it look kinda bad, but I think it shows what it needs to)
 
@@ -46,7 +46,7 @@ Workflow GIF: (This is a short one, for more goodies look at the link below)
   <img src="https://github.com/Axarva/gifs/blob/main/workflow.gif">
 </p>
 
-[Workflow Video by SavvyNik](https://www.youtube.com/watch?v=rMoUCnqhYfs)
+[Workflow Video by SavvyNik](https://www.youtube.com/watch?v=rMoUCnqhYfs) aka [SavvyNik](https://github.com/SavvyNik)
 
 
 [Workflow Video by Guilherme Moreno](https://www.youtube.com/watch?v=im9QKZSMUFQ) aka [@morenoled](https://github.com/morenoled)
