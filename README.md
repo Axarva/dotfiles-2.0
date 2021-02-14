@@ -46,8 +46,10 @@ Workflow GIF: (This is a short one, for more goodies look at the link below)
   <img src="https://github.com/Axarva/gifs/blob/main/workflow.gif">
 </p>
 
-Workflow Video by SavvyNik: https://www.youtube.com/watch?v=rMoUCnqhYfs 
+[Workflow Video by SavvyNik](https://www.youtube.com/watch?v=rMoUCnqhYfs)
 
+
+[Workflow Video by Guilherme Moreno](https://www.youtube.com/watch?v=im9QKZSMUFQ) aka [@morenoled](https://github.com/morenoled)
 
 <a id="keybinds"></a>
 ## Keybinds 
