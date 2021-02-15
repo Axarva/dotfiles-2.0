@@ -1,6 +1,6 @@
 <img src='/screenshots/yeeyee.jpg'>
 
-<h2 align="center">🚀✨ Widgets go brr! ✨🚀</h2>
+<h1 align="center">🚀✨ Widgets go brr! ✨🚀</h1>
 
 
 <p align="center">
@@ -11,9 +11,6 @@
 </p>
 
 ## Table of Contents
-
-<img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="180vh">
-
 
 - [About ⁉️](#about)
 - [Gallery 📷](#gal)
@@ -28,6 +25,11 @@
 <a id="about"></a>
 
 ## Starring:
+
+
+<img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="180vh">
+
+
 - **xmonad** ⚽ 
 - **eww** 🤢
 - **firefox** 🦊
