@@ -3,4 +3,4 @@ running=$(ps h -C xautolock | grep -wv $$ | wc -l);
 [[ $running < 1 ]] && notify-send "Inhibitor Already Active"&& exit;
 
 notify-send "Inhibitor" "Activated"
-pkill xautolock
+pkill xautolock && xset s 0
