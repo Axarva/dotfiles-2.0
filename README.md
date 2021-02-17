@@ -1,19 +1,16 @@
 <img src='/screenshots/yeeyee.jpg'>
 
-<h2 align="center">🚀✨ Widgets go brr! ✨🚀</h2>
+<h1 align="center">🚀✨ Widgets go brr! ✨🚀</h1>
 
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/Axarva/dotfiles-2.0?color=ffd5cd&style=for-the-badge&logo=starship">
-  <img src="https://img.shields.io/github/issues/Axarva/dotfiles-2.0?color=d35d6e&style=for-the-badge&logo=codecov">
-  <img src="https://img.shields.io/github/forks/Axarva/dotfiles-2.0?color=84afdb&style=for-the-badge&logo=jfrog-bintray">
-  <img src="https://img.shields.io/badge/license-MIT-orange.svg?color=90c861&style=for-the-badge&logo=mitsubishi">
+  <a href="https://github.com/Axarva/dotfiles-2.0/stargazers"><img src="https://img.shields.io/github/stars/Axarva/dotfiles-2.0?color=ffd5cd&style=for-the-badge&logo=starship"></a>
+  <a href="https://github.com/Axarva/dotfiles-2.0/issues"><img src="https://img.shields.io/github/issues/Axarva/dotfiles-2.0?color=d35d6e&style=for-the-badge&logo=codecov"></a>
+  <a href="https://github.com/Axarva/dotfiles-2.0/network/members"><img src="https://img.shields.io/github/forks/Axarva/dotfiles-2.0?color=84afdb&style=for-the-badge&logo=jfrog-bintray"></a>
+  <a href="https://github.com/Axarva/dotfiles-2.0/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange.svg?color=90c861&style=for-the-badge&logo=mitsubishi"></a>
 </p>
 
 ## Table of Contents
-
-<img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="400px">
-
 
 - [About ⁉️](#about)
 - [Gallery 📷](#gal)
@@ -28,6 +25,11 @@
 <a id="about"></a>
 
 ## Starring:
+
+
+<img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="180vh">
+
+
 - **xmonad** ⚽ 
 - **eww** 🤢
 - **firefox** 🦊
