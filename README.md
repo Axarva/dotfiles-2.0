@@ -34,7 +34,7 @@
 - **eww** 🤢
 - **firefox** 🦊
 - **rofi** 💈
-- **tint2** 🍫
+- **tint2 (My fork alone is supported)** 🍫
 - **Inhibitors** 👁️ (Inhibitors are cool stuff that prevent auto screen lock when you're watching a video or something)
 - **Healthy stuff** ❤️ (Yeah, you get notifications to fix your posture and take a break)
 - *Insert more stuff here*
@@ -238,7 +238,7 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    eww (ElKowar's Wacky Widgets, binary included, but I encourage you to build it yourself and put the binary in your ~/bin). [Link](https://github.com/elkowar/eww)
 -    firefox (Yup)
 -    rofi version 1.6.0 (Configs originally come from @adi1090x, been edited by me).
--    tint2 (Install using package manager, other binary from my fork is provided)
+-    tint2 (Please use [this fork](https://github.com/Axarva/tint2-1) ONLY, or issues will occur. Binaries provided already.)
 -    acpi
 -    Museo Sans Font by Adobe (I think it needs some sort of acount, but get it) Or just search for it on the web and get it somewhere
 -    ~~Any Nerd Font, Iosevka recommended along with Hurmit.~~ Nerd Fonts now included in folder. [Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) 
@@ -266,17 +266,18 @@ And here we are:
 
 
 1. If xmonad doesn't build make sure you have `xmonad-contrib`
-2. Bar looks weird: Try editing it a bit using `tint2conf`. 
+2. Bar looks weird: Try editing it a bit using `~/bin/tint2conf`. 
 3. Alacritty configs are faulty: I'm not sure about this one, works perfectly fine for me. 
 4. Widgets positioning weird: I hardcoded them for a 1366x768 screen, will create others if I can
 5. Fonts: GET THOSE FONTS!
 6. **MAKE SURE YOUR `~/bin` DIRECTORY IS IN YOUR PATH, OR NOTHING WILL WORK!** (Yes. Absolutely needs to be shouty capitals.)
 7. Anything else? Open up an issue.
-8. Workspace indicator bar lost colors: This has a very long explanation, but the fix is as follows:
-   - Open up the `~/.config/tint2/workspaces.tint2rc` file, and scroll down to the taskbar module at around line 120
-   - Add this line in that block: `taskbar_name_unoccupied_font_color = #ffd5cd 100`
-   - Save the file, and refresh the bar with hitting the keybind `Win + B` twice.
-   - Remember not to edit that particular file with `tint2conf`, or you'll have to do this again!
+8. ~~ Workspace indicator bar lost colors: This has a very long explanation, but the fix is as follows:~~
+   - ~~Open up the `~/.config/tint2/workspaces.tint2rc` file, and scroll down to the taskbar module at around line 120~~
+   - ~~Add this line in that block: `taskbar_name_unoccupied_font_color = #ffd5cd 100`~~
+   - ~~Save the file, and refresh the bar with hitting the keybind `Win + B` twice.~~
+   - ~~Remember not to edit that particular file with `tint2conf`, or you'll have to do this again!~~
+The workspace indicator bar issue has been solved through the binaries in my fork.
    
    
 <h1 align="center">🌟 Good Luck and Cheers! 🌟</h1>

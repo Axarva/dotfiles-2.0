@@ -73,17 +73,17 @@ case $yay in
 	git clone https://aur.archlinux.org/yay.git ~/.srcs/yay
 	(cd ~/.srcs/yay/ && makepkg -si )
 
-	yay -S picom-jonaburg-git tint2 acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	yay -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	;;
 
 [nN][oO]|[nN])
 	echo "Installing Other Stuff then"
-	yay -S picom-jonaburg-git tint2 acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	yay -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	;;
 
 [*])
 	echo "Lets do it anyways lol" 
-	yay -S  picom-jonaburg-git tint2 acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	yay -S  picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	sleep 1
 	;;
 esac
