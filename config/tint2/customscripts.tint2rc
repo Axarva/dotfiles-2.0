@@ -245,7 +245,7 @@ execp_cache_icon = 1
 execp_continuous = 0
 execp_markup = 1
 execp_tooltip = 
-execp_lclick_command = x=$(nmcli -a | grep 'Wired connection' | awk 'NR==1{print $1}') && y=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -c 5-) && notify-send "Connected to $x$y"
+execp_lclick_command = exec ~/.config/tint2/scripts/networkclick.sh
 execp_rclick_command = 
 execp_mclick_command = 
 execp_uwheel_command = 
