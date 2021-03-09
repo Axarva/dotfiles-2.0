@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $(ls ~/ | awk '{print $1}' | head -n5 | tail -n1 | sed -e "s/\b\(.\)/\u\1/g")

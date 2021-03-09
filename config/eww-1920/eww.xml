@@ -153,12 +153,12 @@
     </def>
      <def name="home_dir">
       <box orientation="v" space-evenly="true" class="home-dir">
-        <button class="l1" onclick="thunar ~/{{l1}}">{{l1}}</button>
-        <button class="l2" onclick="thunar ~/{{l2}}">{{l2}}</button>
-        <button class="l3" onclick="thunar ~/{{l3}}">{{l3}}</button>
-        <button class="l4" onclick="thunar ~/{{l4}}">{{l4}}</button>
-        <button class="l5" onclick="thunar ~/{{l5}}">{{l5}}</button>
-        <button class="l6" onclick="thunar ~/{{l6}}">{{l6}}</button>
+        <button class="l1" onclick="(thunar ~/{{l1}})">{{l1-processed}}</button>
+        <button class="l2" onclick="(thunar ~/{{l2}})">{{l2-processed}}</button>
+        <button class="l3" onclick="(thunar ~/{{l3}})">{{l3-processed}}</button>
+        <button class="l4" onclick="(thunar ~/{{l4}})">{{l4-processed}}</button>
+        <button class="l5" onclick="(thunar ~/{{l5}})">{{l5-processed}}</button>
+        <button class="l6" onclick="(thunar ~/{{l6}})">{{l6-processed}}</button>
       </box>
     </def>
     <def name="quote">
@@ -237,6 +237,13 @@
     <script-var name="bat-icon" interval="2m">~/.config/tint2/scripts/battery.sh</script-var>
 
     <!-- Home-dir stuff -->
+    <script-var name="l1-processed" interval="20h">~/.config/eww/scripts/home-dir/l1-processed</script-var>
+    <script-var name="l2-processed" interval="20h">~/.config/eww/scripts/home-dir/l2-processed</script-var>
+    <script-var name="l3-processed" interval="20h">~/.config/eww/scripts/home-dir/l3-processed</script-var>
+    <script-var name="l4-processed" interval="20h">~/.config/eww/scripts/home-dir/l4-processed</script-var>
+    <script-var name="l5-processed" interval="20h">~/.config/eww/scripts/home-dir/l5-processed</script-var>
+    <script-var name="l6-processed" interval="20h">~/.config/eww/scripts/home-dir/l6-processed</script-var>
+
     <script-var name="l1" interval="20h">~/.config/eww/scripts/home-dir/l1</script-var>
     <script-var name="l2" interval="20h">~/.config/eww/scripts/home-dir/l2</script-var>
     <script-var name="l3" interval="20h">~/.config/eww/scripts/home-dir/l3</script-var>
