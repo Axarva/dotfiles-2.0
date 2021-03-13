@@ -107,6 +107,12 @@ Note: `Win` refers to the `Super` key.
 Alright, let's get to the main stuff.
 
 
+If you feel like you don't want to read so much, here's a video, courtesy of [@SavvyNik](https://github.com/SavvyNik)!
+
+[Nik's Installation Video for Arch Linux](https://www.youtube.com/watch?v=a8YJBGk8H4Q)
+
+
+
 Note: Whatever method you follow, if you want the weather and quote features to work as well, you need to modify your crontab as follows: <br>
 (To edit your crontab, `crontab -e` as a normal user.)
 
