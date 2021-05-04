@@ -64,7 +64,7 @@ clear
 # cd $EXT/ && sudo make clean install
 
 # install yay
-read -r -p "Would you like to install paru? Say no if you already have it (step necessary because well, we need some stuff) [yes/no]: " paru
+read -r -p "Would you like to install paru? Say no if you already have it (paru is essential because well, we need some stuff) [yes/no]: " paru
 # echo "Please replace libxft with libxft-bgra in next install" 
 sleep 3
 
