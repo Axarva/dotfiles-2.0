@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x60-15+46"
+    geometry = "300x100-15+46"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Museo Sans 10
+    font = Museo Sans 11
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -130,7 +130,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -250,6 +250,9 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
+[log_notifs]
+    script = ~/bin/dunst_logger.sh
+
 [shortcuts]
 
     # Shortcuts are specified as [modifier+][modifier+]...key
@@ -276,24 +279,24 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     foreground = "#ffd5cd"
-    background = "#121212"
-    frame_color = "#181A20"
+    background = "#273339"
+    frame_color = "#404A4B"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
 
 [urgency_normal]
-    background = "#121212"
+    background = "#273339"
     foreground = "#ffd5cd"
-    frame_color = "#181A20"
+    frame_color = "#404A4B"         #181A20
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png
 
 [urgency_critical]
-    background = "#121212"
+    background = "#273339"
     foreground = "#ffd5cd" #FDF1DB #f5bfd2 #ff8585   #ffdfd3  #fec8d8      #FDF1DB #8fbcbb
-    frame_color = "#181A20"
+    frame_color = "#404A4B"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     icon = ~/.config/dunst/images/notification.png

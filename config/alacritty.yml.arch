@@ -29,7 +29,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x181a20'
+    background: '0x1B2931'
     foreground: '0xeeffff'
 
   # Colors the cursor will use if `custom_cursor_colors` is true

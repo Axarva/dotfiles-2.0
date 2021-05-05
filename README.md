@@ -51,14 +51,13 @@ Even if you're not, just look through the gallery 📷:
 
 
 <a id="gal"></a>
-<img src='/screenshots/sidebar.png'>
-<img src='/screenshots/firefox.png'>
-<img src='/screenshots/center.png'>
+<img src='/screenshots/modified.png'>
 
 <a id="workflow"></a>
 
 ## Workflow 🖨️
 Workflow GIF: (This is a short one, for more goodies look at the links below)
+The workflow doesn't differ on this branch either.
 
 (Also, compression made it look kinda bad, but I think it shows what it needs to)
 

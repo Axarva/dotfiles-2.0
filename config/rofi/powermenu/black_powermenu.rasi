@@ -1,8 +1,8 @@
 /* colors */
 
 * {
-  background-alt:      #121212ff;
-  background:      #121212ff;
+  background-alt:      #273339ff;
+  background:      #273339ff;
   selected:      #ffd5cdff;
   foreground:      #eeeeeeff;
   ac:      #ea907aff;
