@@ -29,7 +29,7 @@
 
 <img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="180vh">
 
-
+- **Note:** Check out the `modified` branch for a newer setup. Hope you like it!
 - **xmonad** ⚽ 
 - **eww** 🤢
 - **firefox** 🦊
