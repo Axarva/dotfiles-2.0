@@ -197,7 +197,6 @@ Note: THIS MAKES BACKUPS TOO, SO YEAH. JUST DO IT. DO IT!
 ```bash
 $ git clone https://github.com/Axarva/dotfiles-2.0.git
 $ cd ./dotfiles-2.0
-$ git checkout modified
 $ chmod +x ./install-on-arch.sh
 $ ./install-on-arch.sh
 ```
@@ -230,7 +229,6 @@ You need to install the dependencies yourself, this script will add the fonts an
 ```bash
 $ git clone https://github.com/Axarva/dotfiles-2.0.git
 $ cd ./dotfiles-2.0
-$ git checkout modified
 $ chmod +x ./install-on-gentoo.sh
 $ ./install-on-gentoo.sh
 ```

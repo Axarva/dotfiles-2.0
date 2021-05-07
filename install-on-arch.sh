@@ -73,17 +73,17 @@ case $paru in
 	git clone https://aur.archlinux.org/paru.git ~/.srcs/paru
 	(cd ~/.srcs/paru/ && makepkg -si )
 
-	paru -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	;;
 
 [nN][oO]|[nN])
 	echo "Installing Other Stuff then"
-	paru -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	;;
 
 [*])
 	echo "Lets do it anyways lol" 
-	paru -S  picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S  picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	sleep 1
 	;;
 esac
@@ -133,10 +133,10 @@ mkdir -p ~/.config/
     if [ -f ~/.config/alacritty.yml ]; then
         echo "Alacritty configs detected, backing up..."
         cp ~/.config/alacritty.yml ~/.config/alacritty.yml.old;
-        cp ./config/alacritty.yml.arch ~/.config/alacritty.yml;
+        cp ./config/alacritty.yml ~/.config/alacritty.yml;
     else
         echo "Installing alacritty configs..."
-         cp ./config/alacritty.yml.arch ~/.config/alacritty.yml;
+         cp ./config/alacritty.yml ~/.config/alacritty.yml;
     fi
     if [ -d ~/.config/dunst ]; then
         echo "Dunst configs detected, backing up..."
