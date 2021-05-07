@@ -73,17 +73,17 @@ case $paru in
 	git clone https://aur.archlinux.org/paru.git ~/.srcs/paru
 	(cd ~/.srcs/paru/ && makepkg -si )
 
-	paru -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	;;
 
 [nN][oO]|[nN])
 	echo "Installing Other Stuff then"
-	paru -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	;;
 
 [*])
 	echo "Lets do it anyways lol" 
-	paru -S  picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S  picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
 	sleep 1
 	;;
 esac
