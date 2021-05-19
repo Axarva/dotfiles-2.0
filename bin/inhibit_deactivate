@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 if [ -z "$(pgrep xautolock)" ]
 then
 	~/bin/lock.sh &
