@@ -197,10 +197,3 @@ echo "For instructions regarding usage on VirtualMachines, please refer to the V
 sleep 5
 xmonad --recompile
 
-
-cd ~/
-
-# install zsh and make it default
-# sudo pacman --noconfirm --needed -S zsh
-#OhMyZsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
