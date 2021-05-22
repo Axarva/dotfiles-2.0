@@ -237,7 +237,7 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    zsh (In progress to be removed as a dependency)
 -    greenclip
 -    alacritty
--    sudom (fork of ibhagwan osudonaburg)sudo
+-    picom (fork of ibhagwan or jonaburg)
 -    jq: Command line json parser (Needed for widgets)
 -    maim and xclip for screenshots
 -    mpv for low-battery sound playing (Not exactly necessary, you'll get the notification, but the sound depends on it.)
