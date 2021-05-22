@@ -14,7 +14,7 @@ echo "Will do stuff, get ready"
 echo "###########################################################################"
 
 # install base-devel if not installed
-sudo pacman -S --noconfirm --needed base-devel wget
+sudo pacman -S --noconfirm --needed base-devel wget git
 
 # choose video driver
 echo "1) xf86-video-intel 	2) xf86-video-amdgpu 3) Skip"
@@ -64,26 +64,26 @@ clear
 # cd $EXT/ && sudo make clean install
 
 # install yay
-read -r -p "Would you like to install yay? Say no if you already have it (step necessary because well, we need some stuff) [yes/no]: " yay
+read -r -p "Would you like to install paru? Say no if you already have it (paru is essential because well, we need some stuff) [yes/no]: " paru
 # echo "Please replace libxft with libxft-bgra in next install" 
 sleep 3
 
-case $yay in
+case $paru in
 [yY][eE][sS]|[yY])
-	git clone https://aur.archlinux.org/yay.git ~/.srcs/yay
-	(cd ~/.srcs/yay/ && makepkg -si )
+	git clone https://aur.archlinux.org/paru.git ~/.srcs/paru
+	(cd ~/.srcs/paru/ && makepkg -si )
 
-	yay -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	;;
 
 [nN][oO]|[nN])
 	echo "Installing Other Stuff then"
-	yay -S picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	;;
 
 [*])
 	echo "Lets do it anyways lol" 
-	yay -S  picom-jonaburg-git acpi rofi-git candy-icons wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim
+	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	sleep 1
 	;;
 esac
@@ -133,10 +133,10 @@ mkdir -p ~/.config/
     if [ -f ~/.config/alacritty.yml ]; then
         echo "Alacritty configs detected, backing up..."
         cp ~/.config/alacritty.yml ~/.config/alacritty.yml.old;
-        cp ./config/alacritty.yml.arch ~/.config/alacritty.yml;
+        cp ./config/alacritty.yml ~/.config/alacritty.yml;
     else
         echo "Installing alacritty configs..."
-         cp ./config/alacritty.yml.arch ~/.config/alacritty.yml;
+         cp ./config/alacritty.yml ~/.config/alacritty.yml;
     fi
     if [ -d ~/.config/dunst ]; then
         echo "Dunst configs detected, backing up..."

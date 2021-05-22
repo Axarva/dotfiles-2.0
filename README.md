@@ -29,7 +29,7 @@
 
 <img src="/screenshots/EwwLogo.png" alt="eww" align="right" height="180vh">
 
-
+- **Note:** Check out the `modified` branch for a newer setup. Hope you like it!
 - **xmonad** ⚽ 
 - **eww** 🤢
 - **firefox** 🦊
@@ -257,7 +257,8 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    An OpenWeatherMap Account, (view eww/scripts/getweather script for more info)
 -    feh
 -    NetworkManager
--    zsh (THIS IS IMPORTANT)
+-    zsh (In progress to be removed as a dependency)
+-    greenclip
 -    alacritty
 -    picom (fork of ibhagwan or jonaburg)
 -    doas- wait, just replace doas occurences with sudo, or go macho and install doas
