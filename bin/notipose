@@ -1,2 +1,2 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 notify-send -i ~/.config/dunst/images/heart.png "Health" "Fix your posture!" #<br>You don't want to end up crooked, do you?"
