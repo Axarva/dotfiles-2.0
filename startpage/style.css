@@ -13,7 +13,7 @@ html{
 
 body {
   background: #121212;
-  /* background-image: url(/home/axarva/wallpapers/yosemite-lowpoly.jpg); */
+  /* background-image: url($HOME/wallpapers/yosemite-lowpoly.jpg); */
   /* background-position: center; */
   /* background-size: cover; */
   color: #ffd5cd;

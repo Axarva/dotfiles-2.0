@@ -131,16 +131,16 @@ And please follow these next few steps as well:
   - Run `fc-cache -f` after getting the font.
 - If the widgets don't work properly, go to [the main repository](https://github.com/elkowar/eww) and install `eww` as documented. Make sure the resulting binary is stored in `~/bin`.
 - Issue `xmonad --recompile` after you complete all the steps, and relogin to xmonad.
-- For the profile picture to load, it needs to have the full path in `eww.scss`. Open the file, search for the string containing `~/.config`(line number 329 to be exact) and edit it to point it to your image. Full path required. For example: `/home/axarva/path/to/image.png`.
+- For the profile picture to load, it needs to have the full path in `eww.scss`. Open the file, search for the string containing `~/.config`(line number 329 to be exact) and edit it to point it to your image. Full path required. For example: `$HOME/path/to/image.png`.
 - Minor details: If you are on `systemd`, edit all the files related to powermenus to match the commands specific to systemd. For example:
 
 ```bash
-loginctl suspend
+systemctl suspend
 ```
 
 And:
 ```bash
-doas poweroff
+sudo poweroff
 ```
 
 Become:
@@ -162,9 +162,9 @@ Respectively.
 <a id="sysd-replace"></a>
 
 ### Stuff to global-replace for systemd users
-- `loginctl suspend` with `systemctl suspend`
-- `doas reboot` with `systemctl reboot`
-- `doas poweroff` with  `systemctl poweroff`
+- `systemctl suspend` with `systemctl suspend`
+- `sudo reboot` with `systemctl reboot`
+- `sudo poweroff` with  `systemctl poweroff`
 
 These references occur in the following files:
 - bin/powermenu.sh
@@ -172,7 +172,7 @@ These references occur in the following files:
 - eww*/scripts/reboot.sh
 - eww*/scripts/suspend.sh
 
-`doas` references:
+`sudo` references:
 - eww*/scripts/getvpnstat (You probably won't be using protonvpn, so you could just ignore this as well.)
 - eww*/scripts/shutdown.sh
 - eww*/scripts/reboot.sh
@@ -261,7 +261,7 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    zsh (In progress to be removed as a dependency)
 -    greenclip
 -    alacritty
--    picom (fork of ibhagwan or jonaburg)
+-    sudom (fork of ibhagwan osudonaburg)sudo
 -    doas- wait, just replace doas occurences with sudo, or go macho and install doas
 -    jq: Command line json parser (Needed for widgets)
 -    maim and xclip for screenshots

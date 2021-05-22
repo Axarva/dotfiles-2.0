@@ -322,7 +322,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Button 1
 button = new
-button_icon = /home/axarva/.config/tint2/icons/launch.png
+button_icon = $HOME/.config/tint2/icons/launch.png
 button_text = 
 button_lclick_command = rofi-apps
 button_rclick_command = 
@@ -338,7 +338,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 2
 button = new
-button_icon = /home/axarva/.config/tint2/icons/terminal.png
+button_icon = $HOME/.config/tint2/icons/terminal.png
 button_text = 
 button_lclick_command = urxvt
 button_rclick_command = 
@@ -354,7 +354,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 3
 button = new
-button_icon = /home/axarva/.config/tint2/icons/thunar.png
+button_icon = $HOME/.config/tint2/icons/thunar.png
 button_text = 
 button_lclick_command = 
 button_rclick_command = 
@@ -370,7 +370,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 4
 button = new
-button_icon = /home/axarva/.config/tint2/icons/firefox.png
+button_icon = $HOME/.config/tint2/icons/firefox.png
 button_text = 
 button_lclick_command = firefox
 button_rclick_command = 
@@ -386,7 +386,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 5
 button = new
-button_icon = /home/axarva/.config/tint2/icons/geany.png
+button_icon = $HOME/.config/tint2/icons/geany.png
 button_text = 
 button_lclick_command = geany
 button_rclick_command = 
