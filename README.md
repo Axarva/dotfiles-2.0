@@ -125,37 +125,14 @@ Note: Whatever method you follow, if you want the weather and quote features to 
 
 
 And please follow these next few steps as well:
-- Add `export PATH="$PATH:/home/{Your_User}/bin"` to your `~/.zshrc` file.
+- Add `export PATH="$PATH:/home/{Your_User}/bin"` to your `~/.basgrc` file (or a shell of your choice).
 - Edit the script in `~/.config/eww/scripts/getweather`. Further steps are specified within that file.
 - Open `tint2conf` and edit the theme `panellauncher.tint2rc`. In there, head over to the `Launcher` tab and set the icon theme as candy-icons.
 - Get the Museo Sans 300 (ONLY THE 300 WEIGHT PLEASE, OTHERS LOOK WEIRD) font from Adobe itself or any other sources, put the `.ttf` or `.otf` file in your `~/.local/share/fonts`
   - Run `fc-cache -f` after getting the font.
 - If the widgets don't work properly, go to [the main repository](https://github.com/elkowar/eww) and install `eww` as documented. Make sure the resulting binary is stored in `~/bin`.
 - Issue `xmonad --recompile` after you complete all the steps, and relogin to xmonad.
-- For the profile picture to load, it needs to have the full path in `eww.scss`. Open the file, search for the string containing `~/.config`(line number 329 to be exact) and edit it to point it to your image. Full path required. For example: `/home/axarva/path/to/image.png`.
-- Minor details: If you are on `systemd`, edit all the files related to powermenus to match the commands specific to systemd. For example:
-
-```bash
-loginctl suspend
-```
-
-And:
-```bash
-doas poweroff
-```
-
-Become:
-
-```bash
-systemctl suspend
-```
-
-And:
-
-
-```bash
-systemctl poweroff
-```
+- For the profile picture to load, it needs to have the full path in `eww.scss`. Open the file, search for the string containing `~/.config`(line number 329 to be exact) and edit it to point it to your image. Full path required. For example: `$HOME/path/to/image.png`.
 
 
 Respectively.
@@ -163,9 +140,9 @@ Respectively.
 <a id="sysd-replace"></a>
 
 ### Stuff to global-replace for systemd users
-- `loginctl suspend` with `systemctl suspend`
-- `doas reboot` with `systemctl reboot`
-- `doas poweroff` with  `systemctl poweroff`
+- `systemctl suspend` with `systemctl suspend`
+- `sudo reboot` with `systemctl reboot`
+- `sudo poweroff` with  `systemctl poweroff`
 
 These references occur in the following files:
 - bin/powermenu.sh
@@ -173,7 +150,7 @@ These references occur in the following files:
 - eww*/scripts/reboot.sh
 - eww*/scripts/suspend.sh
 
-`doas` references:
+`sudo` references:
 - eww*/scripts/getvpnstat (You probably won't be using protonvpn, so you could just ignore this as well.)
 - eww*/scripts/shutdown.sh
 - eww*/scripts/reboot.sh
@@ -257,11 +234,9 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    An OpenWeatherMap Account, (view eww/scripts/getweather script for more info)
 -    feh
 -    NetworkManager
--    zsh (In progress to be removed as a dependency)
 -    greenclip
 -    alacritty
 -    picom (fork of ibhagwan or jonaburg)
--    doas- wait, just replace doas occurences with sudo, or go macho and install doas
 -    jq: Command line json parser (Needed for widgets)
 -    maim and xclip for screenshots
 -    mpv for low-battery sound playing (Not exactly necessary, you'll get the notification, but the sound depends on it.)

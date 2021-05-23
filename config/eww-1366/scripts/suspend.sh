@@ -16,7 +16,7 @@ msg() {
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
 			killall eww
-			loginctl suspend
+			systemctl suspend
 			betterlockscreen -l
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
