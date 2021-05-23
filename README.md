@@ -124,7 +124,7 @@ Note: Whatever method you follow, if you want the weather and quote features to 
 
 
 And please follow these next few steps as well:
-- Add `export PATH="$PATH:/home/{Your_User}/bin"` to your `~/.basgrc` file (or a shell of your choice).
+- Add `export PATH="$PATH:$HOME/bin"` to your `~/.bashrc` file (or a shell of your choice).
 - Edit the script in `~/.config/eww/scripts/getweather`. Further steps are specified within that file.
 - Open `tint2conf` and edit the theme `panellauncher.tint2rc`. In there, head over to the `Launcher` tab and set the icon theme as candy-icons.
 - Get the Museo Sans 300 (ONLY THE 300 WEIGHT PLEASE, OTHERS LOOK WEIRD) font from Adobe itself or any other sources, put the `.ttf` or `.otf` file in your `~/.local/share/fonts`
