@@ -134,25 +134,7 @@ And please follow these next few steps as well:
 - For the profile picture to load, it needs to have the full path in `eww.scss`. Open the file, search for the string containing `~/.config`(line number 329 to be exact) and edit it to point it to your image. Full path required. For example: `$HOME/path/to/image.png`.
 
 
-Respectively.
 
-<a id="sysd-replace"></a>
-
-### Stuff to global-replace for systemd users
-- `systemctl suspend` with `systemctl suspend`
-- `sudo reboot` with `systemctl reboot`
-- `sudo poweroff` with  `systemctl poweroff`
-
-These references occur in the following files:
-- bin/powermenu.sh
-- eww*/scripts/shutdown.sh
-- eww*/scripts/reboot.sh
-- eww*/scripts/suspend.sh
-
-`sudo` references:
-- eww*/scripts/getvpnstat (You probably won't be using protonvpn, so you could just ignore this as well.)
-- eww*/scripts/shutdown.sh
-- eww*/scripts/reboot.sh
 
 <a id="arch"></a>
 
@@ -225,10 +207,9 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    tint2 (Please use [this fork](https://github.com/Axarva/tint2-1) ONLY, or issues will occur. Binaries provided already.)
 -    acpi
 -    Museo Sans Font by Adobe (I think it needs some sort of acount, but get it) Or just search for it on the web and get it somewhere
--    ~~Any Nerd Font, Iosevka recommended along with Hurmit.~~ Nerd Fonts now included in folder. [Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) 
+-    Nerd Font. I include some, but you can use any of your choice. [Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) 
 -    playerctl
 -    brightnessctl. [Link](https://github.com/Hummer12007/brightnessctl)
--    OpenRC (Wait a sec, yep, remember to edit the powermenu files if you use systemd)
 -    candy-icons. [Link](https://github.com/EliverLara/candy-icons)
 -    dunst
 -    Spotify (for cover art, else edit the eww/scripts/getart script accordingly)
