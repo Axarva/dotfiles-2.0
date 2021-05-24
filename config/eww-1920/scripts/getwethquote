@@ -1,3 +1,2 @@
-#!/usr/bin/env zsh
-#Works only with zsh, I had bad experiences with bash. Feel free to modify for bash!
+#!/usr/bin/env bash
 echo $(cat /tmp/xmonad/weather/weather-quote) | head -n1
