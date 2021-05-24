@@ -327,7 +327,7 @@ myStartupHook = do
   spawn "xsetroot -cursor_name left_ptr"
   spawn "exec ~/bin/lock.sh"
   spawnOnce "feh --bg-scale ~/wallpapers/yosemite-lowpoly.jpg"
-  spawnOnce "picom -f"
+  spawnOnce "picom --experimental-backends"
   spawnOnce "greenclip daemon"
   spawnOnce "dunst"
 
