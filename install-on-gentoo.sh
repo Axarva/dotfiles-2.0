@@ -121,6 +121,7 @@ case $conti in
     echo "Open issues on github or ask me on discord or whatever if you face issues." | tee -a ~/Note.txt
     echo "Install Museo Sans as well. Frome Adobe I believe." | tee -a ~/Note.txt
     echo "These instructions have been saved to ~/Note.txt. Make sure to go through them."
+    echo "For instructions regarding usage on VirtualMachines, please refer to the VM folder of this repository." | tee -a ~/Note.txt
     sleep 5
     xmonad --recompile
 	;;

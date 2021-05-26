@@ -196,6 +196,7 @@ echo "Open issues on github or ask me on discord or whatever if you face issues.
 echo "Install Museo Sans as well. Frome Adobe I believe." | tee -a ~/Note.txt
 echo "If the bar doesn't work, use tint2conf and set stuff up, if you're hopelessly lost(which you probably are not), open an issue." | tee -a ~/Note.txt
 echo "These instructions have been saved to ~/Note.txt. Make sure to go through them."
+echo "For instructions regarding usage on VirtualMachines, please refer to the VM folder of the repo." | tee -a ~/Note.txt
 sleep 5
 xmonad --recompile
 
