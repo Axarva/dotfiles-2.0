@@ -241,6 +241,7 @@ And here we are:
    - ~~Save the file, and refresh the bar with hitting the keybind `Win + B` twice.~~
    - ~~Remember not to edit that particular file with `tint2conf`, or you'll have to do this again!~~
 9. The workspace indicator bar issue has been solved through the binaries in my fork.
+10. For instructions regarding use on VirtualMachine, please do check the `VM` folder of this repository.
    
    
 <h1 align="center">🌟 Good Luck and Cheers! 🌟</h1>
