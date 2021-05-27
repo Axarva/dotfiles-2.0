@@ -37,7 +37,7 @@ case $vid in
 esac
 
 # install xorg if not installed
-sudo pacman -S --noconfirm --needed feh xorg xorg-xinit xorg-xinput $DRI xmonad
+sudo pacman -S --noconfirm --needed rofi feh xorg xorg-xinit xorg-xinput $DRI xmonad
 
 # install fonts, window manager and terminal
 mkdir -p ~/.local/share/fonts
@@ -73,17 +73,17 @@ case $paru in
 	git clone https://aur.archlinux.org/paru.git ~/.srcs/paru
 	(cd ~/.srcs/paru/ && makepkg -si )
 
-	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+	paru -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	;;
 
 [nN][oO]|[nN])
 	echo "Installing Other Stuff then"
-	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+	paru -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	;;
 
 [*])
 	echo "Lets do it anyways lol" 
-	paru -S picom-jonaburg-git acpi rofi-git candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+	paru -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	sleep 1
 	;;
 esac
