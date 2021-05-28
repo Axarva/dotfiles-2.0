@@ -108,12 +108,12 @@ case $conti in
         mkdir ~/bin && cp -r ./bin/* ~/bin/;
     fi
     printf "\n"
-    echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your dm" | tee ~/Note.txt
+    echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" | tee ~/Note.txt
     printf "\n" | tee -a ~/Note.txt
     echo "Please add: export PATH='\$PATH:$HOME/bin' to your .bashrc if not done already." | tee -a ~/Note.txt
     echo "For startpage, copy the startpage directory into wherever you want, and set it as new tab in firefox settings." | tee -a ~/Note.txt
     echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" | tee -a ~/Note.txt
-    echo "ALL DONE! Issue 'xmonad --recompile' and then re-login for all changes to take place!" | tee -a ~/Note.txt
+    echo "Reboot for all changes to take place!" | tee -a ~/Note.txt
     echo "Open issues on github or ask me on discord or whatever if you face issues." | tee -a ~/Note.txt
     echo "Install Museo Sans as well. Frome Adobe I believe." | tee -a ~/Note.txt
     echo "These instructions have been saved to ~/Note.txt. Make sure to go through them."
