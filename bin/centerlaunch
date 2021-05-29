@@ -1,4 +1,0 @@
-#!/bin/bash
-
-exec ~/bin/eww open-many blur_full weather profile quote search_full incognito-icon vpn-icon home_dir screenshot power_full reboot_full lock_full logout_full suspend_full 
-
