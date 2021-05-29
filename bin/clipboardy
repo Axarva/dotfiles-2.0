@@ -1,2 +1,0 @@
-#!/bin/bash
-rofi -modi " :greenclip print" -show " " -run-command '{cmd}' -theme ~/.config/rofi/launcher/style.rasi
