@@ -178,14 +178,14 @@ mkdir -p ~/.config/
         echo "Installing bin scripts..."
         mkdir ~/bin && cp -r ./bin/* ~/bin/;
 	clear
-        echo "Please add: export PATH='\$PATH:/home/{Your_user}/bin' to your .zshrc. Replace {Your_user} with your username."
+        echo "Please add: export PATH='\$PATH:$HOME/bin' to your .bashrc or whatever shell you use."
     fi
     
 
 # done 
 echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" | tee ~/Note.txt
 printf "\n" >> ~/Note.txt
-echo "Please add: export PATH='\$PATH:/home/{Your_user}/bin' to your .zshrc if not done already. Replace {Your_user} with your username." | tee -a ~/Note.txt
+echo "Please add: export PATH='\$PATH:$HOME/bin' to your .bashrc if not done already." | tee -a ~/Note.txt
 echo "For startpage, copy the startpage directory into wherever you want, and set it as new tab in firefox settings." | tee -a ~/Note.txt
 echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" | tee -a ~/Note.txt
 echo "ALL DONE! Reboot for all changes to take place!" | tee -a ~/Note.txt
@@ -196,4 +196,3 @@ echo "These instructions have been saved to ~/Note.txt. Make sure to go through 
 echo "For instructions regarding usage on VirtualMachines, please refer to the VM folder of the repo." | tee -a ~/Note.txt
 sleep 5
 xmonad --recompile
-

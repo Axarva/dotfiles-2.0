@@ -6,14 +6,13 @@ echo "Warning! Have you installed the dependencies already? If not, please do so
 echo "Dependencies are mentioned in README. Here they are anyways:"
 echo "1) xmonad (by portage)"
 echo "2) acpi (by portage)"
-echo "3) zsh (by portage)"
-echo "4) picom (ibhagwan) (https://github.com/ibhagwan/picom)"
-echo "5) alacritty (by portage)"
-echo "6) dunst (by portage)"
-echo "7) rofi (v 1.6.0) (echo '=rofi-1.6.0 ~amd64' >> /etc/portage/package.accept_keywords && emerge rofi)"
-echo "8) candy-icon theme (https://github.com/EliverLara/candy-icons)"
-echo "9) NetworkManager (by portage)"
-echo "10) feh (by portage)"
+echo "3) picom (ibhagwan) (https://github.com/ibhagwan/picom)"
+echo "4) alacritty (by portage)"
+echo "5) dunst (by portage)"
+echo "6) rofi (v 1.6.0) (echo '=rofi-1.6.0 ~amd64' >> /etc/portage/package.accept_keywords && emerge rofi)"
+echo "7) candy-icon theme (https://github.com/EliverLara/candy-icons)"
+echo "8) NetworkManager (by portage)"
+echo "9) feh (by portage)"
 echo "That should be the basics"
 read -r -p "Continue? [yes/no]: " conti
 
@@ -111,7 +110,7 @@ case $conti in
     printf "\n"
     echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" | tee ~/Note.txt
     printf "\n" | tee -a ~/Note.txt
-    echo "Please add: export PATH='\$PATH:/home/{Your_user}/bin' to your .zshrc if not done already. Replace {Your_user} with your username." | tee -a ~/Note.txt
+    echo "Please add: export PATH='\$PATH:$HOME/bin' to your .bashrc if not done already." | tee -a ~/Note.txt
     echo "For startpage, copy the startpage directory into wherever you want, and set it as new tab in firefox settings." | tee -a ~/Note.txt
     echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" | tee -a ~/Note.txt
     echo "Reboot for all changes to take place!" | tee -a ~/Note.txt
