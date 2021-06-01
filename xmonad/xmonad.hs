@@ -91,10 +91,10 @@ addEWMHFullscreen   = do
 
 centerlaunch = spawn "exec ~/bin/eww open-many blur_full weather profile quote search_full incognito-icon vpn-icon home_dir screenshot power_full reboot_full lock_full logout_full suspend_full"
 sidebarlaunch = spawn "exec ~/bin/eww open-many weather_side time_side smol_calendar player_side sys_side sliders_side"
-clipboardy = spawn "rofi -modi " :greenclip print" -show " " -run-command '{cmd}' -theme ~/.config/rofi/launcher/style.rasi"
+clipboardy = spawn "rofi -modi \" :greenclip print\" -show \" \" -run-command '{cmd}' -theme ~/.config/rofi/launcher/style.rasi"
 ewwclose = spawn "exec ~/bin/eww close-all"
-maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send "Screenshot" "Copied to Clipboard" -i flameshot"
-maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send "Screenshot" "Saved to Desktop" -i flameshot"
+maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
+maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send \"Screenshot\" \"Saved to Desktop\" -i flameshot"
 rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\" "
 
 
