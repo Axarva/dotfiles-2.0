@@ -95,6 +95,7 @@ clipboardy = spawn "rofi -modi " :greenclip print" -show " " -run-command 
 ewwclose = spawn "exec ~/bin/eww close-all"
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send "Screenshot" "Copied to Clipboard" -i flameshot"
 maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send "Screenshot" "Saved to Desktop" -i flameshot"
+rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\" "
 
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -106,7 +107,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_F1    ), spawn "betterlockscreen -l")
 
     -- launch rofi and dashboard
-    , ((modm,               xK_o     ), spawn "~/bin/launcher.sh")
+    , ((modm,               xK_o     ), rofi_launcher)
     , ((modm,               xK_p     ), centerlaunch)
     , ((modm .|. shiftMask, xK_p     ), ewwclose)
 
