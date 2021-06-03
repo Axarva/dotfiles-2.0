@@ -88,10 +88,11 @@ addEWMHFullscreen   = do
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 --
+clipboardy :: MonadIO m => m () -- Don't question it 
+clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme ~/.config/rofi/launcher/style.rasi"
 
 centerlaunch = spawn "exec ~/bin/eww open-many blur_full weather profile quote search_full incognito-icon vpn-icon home_dir screenshot power_full reboot_full lock_full logout_full suspend_full"
 sidebarlaunch = spawn "exec ~/bin/eww open-many weather_side time_side smol_calendar player_side sys_side sliders_side"
-clipboardy = spawn "rofi -modi \" :greenclip print\" -show \" \" -run-command '{cmd}' -theme ~/.config/rofi/launcher/style.rasi"
 ewwclose = spawn "exec ~/bin/eww close-all"
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
 maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send \"Screenshot\" \"Saved to Desktop\" -i flameshot"
@@ -135,7 +136,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_b     ), spawn "exec ~/bin/bartoggle")
     , ((modm,               xK_z     ), spawn "exec ~/bin/inhibit_activate")
     , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/inhibit_deactivate")
-    , ((modm .|. shiftMask, xK_a     ), spawn clipboardy)
+    , ((modm .|. shiftMask, xK_a     ), clipboardy)
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
