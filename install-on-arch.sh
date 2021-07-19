@@ -17,7 +17,7 @@ echo "##########################################################################
 sudo pacman -S --noconfirm --needed base-devel wget git
 
 # choose video driver
-echo "1) xf86-video-intel 	2) xf86-video-amdgpu 3) Skip"
+echo "1) xf86-video-intel 	2) xf86-video-amdgpu 3) nvidia 4) Skip"
 read -r -p "Choose you video card driver(default 1)(will not re-install): " vid
 
 case $vid in 
@@ -28,7 +28,12 @@ case $vid in
 [2])
 	DRI='xf86-video-amdgpu'
 	;;
+
 [3])
+    DRI='nvidia nvidia-settings'
+    ;;
+
+[4])
 	DRI=""
 	;;
 [*])
