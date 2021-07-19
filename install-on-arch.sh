@@ -62,29 +62,43 @@ clear
 
 # git clone $CLIENT/$EXT
 # cd $EXT/ && sudo make clean install
+echo "We need an AUR helper. It is essential. 1) paru       2) yay"
+read -r -p "What is the AUR helper of your choice? (Default is paru)" $num
 
-# install paru
-read -r -p "Would you like to install paru? Say no if you already have it (paru is essential because well, we need some stuff) [yes/no]: " paru
+case $num in 
+[1])
+	HELPER="paru"
+	;;
+
+[2])
+	HELPER="yay"
+	;;
+[*])
+	HELPER='paru'
+	;;
+esac
+
+# install helper
+read -r -p "Would you like to install $HELPER? Say no if you already have it [yes/no]: " inst
 # echo "Please replace libxft with libxft-bgra in next install" 
 sleep 3
 
-case $paru in
+case $inst in
 [yY][eE][sS]|[yY])
-	git clone https://aur.archlinux.org/paru.git ~/.srcs/paru
-	(cd ~/.srcs/paru/ && makepkg -si )
+	git clone https://aur.archlinux.org/$HELPER.git ~/.srcs/$HELPER
+	(cd ~/.srcs/$HELPER/ && makepkg -si )
 
-	paru -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+	$HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	;;
 
 [nN][oO]|[nN])
 	echo "Installing Other Stuff then"
-	paru -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+	$HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 	;;
 
 [*])
-	echo "Lets do it anyways lol" 
-	paru -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
-	sleep 1
+	echo "Um, well then, quitting." 
+	exit 1
 	;;
 esac
 
