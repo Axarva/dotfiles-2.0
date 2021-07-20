@@ -68,7 +68,7 @@ clear
 # git clone $CLIENT/$EXT
 # cd $EXT/ && sudo make clean install
 echo "We need an AUR helper. It is essential. 1) paru       2) yay"
-read -r -p "What is the AUR helper of your choice? (Default is paru)" $num
+read -r -p "What is the AUR helper of your choice? (Default is paru): " num
 
 case $num in 
 [1])
