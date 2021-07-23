@@ -90,7 +90,10 @@ then
 else
     echo "Looks like you've already got $HELPER installed, let's proceed then."
     $HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+<<<<<<< HEAD
     exit 1;
+=======
+>>>>>>> d6b7fbf (Move  to file scope so that it is preserved through the runtime of the script, for arch.)
 fi
 
 #install custom picom config file 
