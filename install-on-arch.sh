@@ -3,6 +3,8 @@ set -e
 
 echo "Welcome!" && sleep 2
 
+HELPER="paru"
+
 # aliases
 
 # does full system update
@@ -70,17 +72,10 @@ clear
 echo "We need an AUR helper. It is essential. 1) paru       2) yay"
 read -r -p "What is the AUR helper of your choice? (Default is paru): " num
 
-HELPER="paru"
-
-case $num in 
-[1])
-	HELPER="paru"
-	;;
-
-[2])
-	HELPER="yay"
-	;;
-esac
+if [ $num -eq 2 ]
+then
+    HELPER="yay"
+fi
 
 if ! command -v $HELPER &> /dev/null
 then
@@ -89,12 +84,9 @@ then
 	(cd ~/.srcs/$HELPER/ && makepkg -si )
 else
     echo "Looks like you've already got $HELPER installed, let's proceed then."
-    $HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
-<<<<<<< HEAD
-    exit 1;
-=======
->>>>>>> d6b7fbf (Move  to file scope so that it is preserved through the runtime of the script, for arch.)
 fi
+
+$HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 
 #install custom picom config file 
 mkdir -p ~/.config/
