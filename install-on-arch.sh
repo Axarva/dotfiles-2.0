@@ -66,8 +66,6 @@ then
     echo "It seems that you don't have $HELPER installed, I'll install that for you before continuing."
 	git clone https://aur.archlinux.org/$HELPER.git ~/.srcs/$HELPER
 	(cd ~/.srcs/$HELPER/ && makepkg -si )
-else
-    echo "Looks like you've already got $HELPER installed, let's proceed then."
 fi
 
 $HELPER -S picom-jonaburg-git\
