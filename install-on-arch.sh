@@ -3,9 +3,8 @@ set -e
 
 echo "Welcome!" && sleep 2
 
+#Default vars
 HELPER="paru"
-
-# aliases
 
 # does full system update
 echo "Doing a system update, cause stuff may break if it's not the latest version..."
@@ -46,29 +45,14 @@ esac
 # install xorg if not installed
 sudo pacman -S --noconfirm --needed rofi feh xorg xorg-xinit xorg-xinput $DRI xmonad
 
-# install fonts, window manager and terminal
+# install fonts
 mkdir -p ~/.local/share/fonts
 mkdir -p ~/.srcs
 
-# cd ~/.srcs 
-
-# git clone $CLIENT/$FONT 
 cp -r ./fonts/* ~/.local/share/fonts/
 fc-cache -f
 clear 
 
-# git clone $CLIENT/$WM 
-# cd $WM/ && sudo make clean install
-
-# cd ~/.srcs/
-
-# git clone $CLIENT/$EMU 
-# cd $EMU/ && sudo make clean install 
-
-# cd ~/.srcs/
-
-# git clone $CLIENT/$EXT
-# cd $EXT/ && sudo make clean install
 echo "We need an AUR helper. It is essential. 1) paru       2) yay"
 read -r -p "What is the AUR helper of your choice? (Default is paru): " num
 
@@ -86,7 +70,20 @@ else
     echo "Looks like you've already got $HELPER installed, let's proceed then."
 fi
 
-$HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+$HELPER -S picom-jonaburg-git\
+	   acpi              \
+	   candy-icons-git   \
+	   wmctrl            \
+	   alacritty         \
+	   playerctl         \
+	   dunst             \
+	   xmonad-contrib    \
+	   jq                \
+	   xclip             \
+	   maim              \
+	   rofi-greenclip    \
+	   xautolock         \
+	   betterlockscreen
 
 #install custom picom config file 
 mkdir -p ~/.config/
@@ -213,7 +210,6 @@ mkdir -p ~/.config/
 # done 
 echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" | tee ~/Note.txt
 printf "\n" >> ~/Note.txt
-echo "Please add: export PATH='\$PATH:$HOME/bin' to your .bashrc if not done already." | tee -a ~/Note.txt
 echo "For startpage, copy the startpage directory into wherever you want, and set it as new tab in firefox settings." | tee -a ~/Note.txt
 echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" | tee -a ~/Note.txt
 echo "ALL DONE! Reboot for all changes to take place!" | tee -a ~/Note.txt
