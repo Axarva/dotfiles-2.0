@@ -83,29 +83,15 @@ case $num in
 	;;
 esac
 
-# install helper
-read -r -p "Would you like to install $HELPER? Say no if you already have it [yes/no]: " inst
-# echo "Please replace libxft with libxft-bgra in next install" 
-sleep 3
-
-case $inst in
-[yY][eE][sS]|[yY])
+if ! command -v $HELPER &> /dev/null
+then
+    echo "It seems that you don't have $HELPER installed, I'll install that for you before continuing."
 	git clone https://aur.archlinux.org/$HELPER.git ~/.srcs/$HELPER
 	(cd ~/.srcs/$HELPER/ && makepkg -si )
-
+else
+    echo "Looks like you've already got $HELPER installed, let's proceed then."
 	$HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
-	;;
-
-[nN][oO]|[nN])
-	echo "Installing Other Stuff then"
-	$HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
-	;;
-
-[*])
-	echo "Um, well then, quitting." 
-	exit 1
-	;;
-esac
+fi
 
 #install custom picom config file 
 mkdir -p ~/.config/
@@ -197,7 +183,35 @@ mkdir -p ~/.config/
         echo "Installing bin scripts..."
         mkdir ~/bin && cp -r ./bin/* ~/bin/;
 	clear
-        echo "Please add: export PATH='\$PATH:$HOME/bin' to your .bashrc or whatever shell you use."
+        SHELLNAME=$(echo $SHELL | grep -o '[^/]*$')
+        case $SHELLNAME in
+            bash)
+                if [[ ":$PATH:" == *":$HOME/bin:"* ]]; then
+                    echo "Looks like $HOME/bin is not on your PATH, adding it now."
+                    echo "export PATH=\$PATH:\$HOME/bin" >> $HOME/.bashrc
+                else
+                    echo "$HOME/bin is already in your PATH. Proceeding."
+                fi
+                ;;
+
+            zsh)
+                if [[ ":$PATH:" == *":$HOME/bin:"* ]]; then
+                    echo "Looks like $HOME/bin is not on your PATH, adding it now."
+                    echo "export PATH=\$PATH:\$HOME/bin" >> $HOME/.zshrc
+                else
+                    echo "$HOME/bin is already in your PATH. Proceeding."
+                fi
+                ;;
+
+            fish)
+                echo "I see you use fish. shahab96 likes your choice."
+                fish -c fish_add_path -P $HOME/bin
+                ;;
+
+            *)
+                echo "Please add: export PATH='\$PATH:$HOME/bin' to your .bashrc or whatever shell you use."
+                echo "If you know how to add stuff to shells other than bash, zsh and fish please help out here!"
+        esac
     fi
     
 
