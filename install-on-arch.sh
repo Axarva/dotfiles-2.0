@@ -30,7 +30,7 @@ case $vid in
 	;;
 
 [3])
-    DRI='nvidia nvidia-settings'
+    DRI='nvidia nvidia-settings nvidia-utils'
     ;;
 
 [4])
