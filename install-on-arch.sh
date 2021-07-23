@@ -70,6 +70,8 @@ clear
 echo "We need an AUR helper. It is essential. 1) paru       2) yay"
 read -r -p "What is the AUR helper of your choice? (Default is paru): " num
 
+HELPER="paru"
+
 case $num in 
 [1])
 	HELPER="paru"
@@ -77,9 +79,6 @@ case $num in
 
 [2])
 	HELPER="yay"
-	;;
-[*])
-	HELPER='paru'
 	;;
 esac
 
@@ -90,7 +89,7 @@ then
 	(cd ~/.srcs/$HELPER/ && makepkg -si )
 else
     echo "Looks like you've already got $HELPER installed, let's proceed then."
-	$HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
+    $HELPER -S picom-jonaburg-git acpi candy-icons-git wmctrl alacritty playerctl dunst xmonad-contrib jq xclip maim rofi-greenclip
 fi
 
 #install custom picom config file 
