@@ -136,6 +136,11 @@ element alternate.active {
     text-color:       				@fg;
 }
 
+element-text, element-icon {
+    background-color:               inherit;
+    text-color:                     inherit;
+}
+
 sidebar {
     border:       					0px;
     border-color: 					@ac;
