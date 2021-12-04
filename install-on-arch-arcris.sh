@@ -142,7 +142,7 @@ echo "For startpage, copy the startpage directory into wherever you want, and se
 echo "For more info on startpage (Which is a fork of Prismatic Night), visit https://github.com/dbuxy218/Prismatic-Night#Firefoxtheme" | tee -a ~/Note.txt
 echo "ALL DONE! Reboot for all changes to take place!" | tee -a ~/Note.txt
 echo "Open issues on github or ask me on discord or whatever if you face issues." | tee -a ~/Note.txt
-echo "Install Museo Sans as well. Frome Adobe I believe." | tee -a ~/Note.txt
+echo "Install Museo Sans as well. From Adobe I believe." | tee -a ~/Note.txt
 echo "If the bar doesn't work, use tint2conf and set stuff up, if you're hopelessly lost, open an issue." | tee -a ~/Note.txt
 echo "These instructions have been saved to ~/Note.txt. Make sure to go through them."
 echo "For instructions regarding usage on VirtualMachines, please refer to the VM folder of the repo." | tee -a ~/Note.txt
