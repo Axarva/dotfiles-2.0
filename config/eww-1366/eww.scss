@@ -4,7 +4,6 @@
 
 window {
   background-color: #273339;
-/*  background-color: #000000; */
 	color: #ffd5cd;
   font-family: Museo Sans;
 }
@@ -21,7 +20,6 @@ button {
   min-width: 260px;
   margin: 20px;
   border-radius: 10px;
-  // padding: 10px;
 }
 
 .musictitle {
@@ -43,7 +41,7 @@ button {
   color: #D35D6E;
 }
 
-.volume scale trough {
+.music-slider scale trough {
 	all: unset;
 	background-color: #4e4e4e;
 	border-radius: 50px;
@@ -52,14 +50,14 @@ button {
   margin-bottom: 20px;
 }
 
-.volume scale trough highlight {
+.music-slider scale trough highlight {
 	all: unset;
 	background-color: #ffd5cd;
 	color: #000000;
 	border-radius: 10px;
 }
 
-.volume slider {
+.music-slider slider {
   all: unset;
   color: #ffd5cd;
 }
@@ -72,7 +70,6 @@ button {
 
 .month {
   font-weight: bold;
-  // color: #c47eb7;
 }
 
 .weather-icon-side {
@@ -93,25 +90,20 @@ button {
   font-weight: 900;
   padding-top: 15px;
   padding-left: 10px;
-  // color: #c47eb7;
 }
 
 .musicart-side {
-  // background-image: url("/tmp/xmonad/spotify/cover.png");
-  background-size: 80px;
-  min-height: 70px;
-  min-width: 80px;
-  margin: 15px;
+  background-size: 92px;
+  min-height: 90px;
+  min-width: 90px;
+  margin: 15px 5px 15px 15px;
   border-radius: 6px;
 }
 .musicinfo-side {
   font-size: 15px;
-  margin-top: 25px;
-  margin-left: 5px;
+  margin-top: 32px;
   font-weight: bold;
-  // margin: 20px;
   border-radius: 10px;
-  // border: 1px solid white;
   min-width: 40px;
 }
 .musicbtn-side {
@@ -146,9 +138,6 @@ button {
   font-weight: bold;
   color: #90c861;
 }
-
-
-
 
 .sliders-side slider {
   all: unset;
@@ -271,12 +260,6 @@ button {
 .logout-side{
   color: #90c861;
 }
-
-
-// .calendar {
-//   margin: 20px;
-//   font-size: 16px;
-// }
 .calendar_title {
   margin: 20px 20px 0px 20px;
   font-size: 16px;
@@ -326,12 +309,13 @@ button {
 }
 
 .pfp {
-  background-image: url("$HOME/.config/eww/images/image.png");
+  background-image: url("$HOME/.config/eww/images/eww.jpg");
   background-repeat: no-repeat;
-  background-size: 150px;
-  min-height: 150px;
-  min-width: 150px;
-  margin: 50px 50px 10px 80px;
+  background-size: 200px;
+  background-position: center;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 40px 30px 10px 50px;
   border-radius: 500px;
 }
 .pfptxt {
@@ -367,8 +351,6 @@ button {
 }
 .weather-quote-head, .weather-quote-tail {
   font-size: 16px;
-  // font-weight: bold;
-  // color: #90c861
 }
 
 .l1, .l2, .l3, .l4, .l5, .l6 {
@@ -378,33 +360,26 @@ button {
 .home-dir {
   margin: 10px;
 }
-.home-dir button:hover {
-  color: #ffd5cd;
+.l1:hover, .l3:hover, .l4:hover, .l6:hover {
+  color: #D35D6E;
 }
-.l1 {
+.l1, .l6 {
  color: #84afdb;
 }
-.l2 {
-//  color: #90c861;
+.l2, .l5 {
+ color: #ffd5cd;
 }
-.l3 {
+.l3, .l4 {
  color: #c47eb7;
 }
-.l4 {
- color: #D35D6E;
-}
-.l5 {
-  // color: #90c861;
-}
-.l6 {
-color: #84afdb;
+.l5:hover, .l2:hover {
+  color: #D35D6E;
 }
 
 .quote-main {
   font-size: 14px;
   font-weight: bold;
   margin-top: 20px;
-  // margin-bottom: 20px;
   margin-left: 20px;
   color: #A5b3c0;
 }
@@ -417,7 +392,6 @@ color: #84afdb;
 .quote-tail {
   font-size: 14px;
   font-weight: bold;
-  // margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 20px;
   color: #A5b3c0;
@@ -429,16 +403,20 @@ color: #84afdb;
   margin-right: 10px;
   font-family: Iosevka;
 }
+.screenshot-icon:hover {
+  color: #D35D6E;
+}
 
 .vpn-icon {
   font-size: 45px;
   margin-right: 5px;
 }
-.incognito-icon {
-  font-size: 45px;
-  margin-right: 10px;
-  color: #c47eb7;
+.vpn-icon:hover {
+ color: #ffd5cd;
 }
-.quote-box {
-  // margin: 5px;
+.disturb-icon {
+  font-size: 45px;
+}
+.disturb-icon:hover {
+ color: #ffd5cd;
 }

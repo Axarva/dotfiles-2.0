@@ -1,0 +1,11 @@
+#!/bin/zsh
+tmp_dir="/tmp/xmonad/spotify"
+tmp_artist_path=$tmp_dir/artist
+
+if [ ! -d $tmp_dir ]; then
+	mkdir -p $tmp_dir
+fi
+
+artist=$(playerctl metadata --format '{{ artist }}')
+echo $artist > $tmp_artist_path
+		
