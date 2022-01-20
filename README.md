@@ -39,6 +39,7 @@
 - **Healthy stuff** ❤️ (Yeah, you get notifications to fix your posture and take a break)
 - *Insert more stuff here*
 
+**A new note**: Yuck is live on the `modified` branch! I'm still not sure if the configs would work as expected (there have been a few changes), and I would love it if users could test it out and report issues. Thank you so much everyone (and eww devs, specially you guys)!
 
 Hello! Thank you for dropping by! 👋
 
@@ -140,15 +141,6 @@ And please follow these next few steps as well:
 <a id="arch"></a>
 
 ### For Arch Linux and it's derivatives (make sure you have git installed): 🌇
-**Piece of good advice**: Since you are on an Arch-based distro, it is likely you use `systemd`. In case you don't, go ahead and ignore this and skip to [Going Ahead: Arch Edition](#ga-arch).
-
-
-In case you do, I recommend opening this repository in a text editor after you clone it, and global-replace the stuff specified in [Stuff for sysd users](#sysd-replace). After that, go ahead with [Going Ahead: Arch Edition](#ga-arch).
-
-
-<a id="ga-arch"></a>
-
-#### Going Ahead: Arch Edition 
 
 Note: THIS MAKES BACKUPS TOO, SO YEAH. JUST DO IT. DO IT!
 
@@ -173,11 +165,11 @@ AND DON'T FORGET TO READ WHAT'S WRITTEN AT THE END OF THE MAIN INSTALLATION SECT
 ### For Gentoo Linux users (And basically any other distro): 🚂
 I'm sorry guys, I couldn't do it. I'm having a mental breakdown rn.
 
-**Piece of good advice**:  If you don't use `systemd`, go ahead and ignore this, and skip to [Going ahead: Others Edition](#ga-other).
+**Piece of good advice**:  If you use `systemd`, go ahead and ignore this, and skip to [Going ahead: Others Edition](#ga-other).
 
 
 
-In case you do use `systemd`, I recommend opening this repository in a text editor after you clone it, and global-replace the stuff specified in [Stuff for sysd users](#sysd-replace). After that, go ahead with [Going ahead: Others Edition](#ga-other).
+In case you use something else, I recommend opening this repository in a text editor after you clone it, and global-replace the stuff that suits your system. After that, go ahead with [Going ahead: Others Edition](#ga-other).
 
 <a id="ga-other"></a>
 
@@ -234,14 +226,14 @@ And here we are:
 4. Widgets positioning weird: I hardcoded them for a 1366x768 screen, will create others if I can
 5. Fonts: GET THOSE FONTS!
 6. **MAKE SURE YOUR `~/bin` DIRECTORY IS IN YOUR PATH, OR NOTHING WILL WORK!** (Yes. Absolutely needs to be shouty capitals.)
-7. Anything else? Open up an issue.
+7. For instructions regarding use on VirtualMachine, please do check the `VM` folder of this repository.
 8. ~~Workspace indicator bar lost colors: This has a very long explanation, but the fix is as follows:~~
    - ~~Open up the `~/.config/tint2/workspaces.tint2rc` file, and scroll down to the taskbar module at around line 120~~
    - ~~Add this line in that block: `taskbar_name_unoccupied_font_color = #ffd5cd 100`~~
    - ~~Save the file, and refresh the bar with hitting the keybind `Win + B` twice.~~
    - ~~Remember not to edit that particular file with `tint2conf`, or you'll have to do this again!~~
 9. The workspace indicator bar issue has been solved through the binaries in my fork.
-10. For instructions regarding use on VirtualMachine, please do check the `VM` folder of this repository.
+10. Anything else? Open up an issue.
    
    
 <h1 align="center">🌟 Good Luck and Cheers! 🌟</h1>
