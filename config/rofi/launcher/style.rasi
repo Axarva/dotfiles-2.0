@@ -99,6 +99,11 @@ element {
     border-radius: 					4px;
     padding: 						5px;
 }
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
 element normal.normal {
     background-color: 				@bg;
     text-color:       				@fg;
