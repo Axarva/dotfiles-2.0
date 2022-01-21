@@ -83,6 +83,11 @@ element {
     border-radius:                  100%;
 }
 
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
 element-text {
 	font:							"feather 28";
     expand:                         true;

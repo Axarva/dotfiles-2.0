@@ -196,7 +196,7 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 -    xmonad (OF COURSE, DUH)
 -    eww (ElKowar's Wacky Widgets, binary included, but I encourage you to build it yourself and put the binary in your ~/bin). [Link](https://github.com/elkowar/eww)
 -    firefox (Yup)
--    rofi version 1.6.0 (Configs originally come from @adi1090x, been edited by me).
+-    rofi version 1.7.0 (Configs originally come from @adi1090x, been edited by me).
 -    tint2 (Please use [this fork](https://github.com/Axarva/tint2-1) ONLY, or issues will occur. Binaries provided already.)
 -    acpi
 -    Museo Sans Font by Adobe (I think it needs some sort of acount, but get it) Or just search for it on the web and get it somewhere
