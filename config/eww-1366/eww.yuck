@@ -54,11 +54,11 @@
       (box :orientation "v" :space-evenly "false" 
         (button :class "search-side" :onclick "~/bin/launcher.sh" "  Search...")
         (box :orientation "h" :halign "center" :class "sysbtn" :space-evenly "true" 
-          (button :class "shutdown-side" :onclick "~/.config/eww/scripts/shutdown.sh" "")
-          (button :class "reboot-side" :onclick "~/.config/eww/scripts/reboot.sh" "")
-          (button :class "lock-side" :onclick "~/.config/eww/scripts/lockscreen.sh" "")
-          (button :class "suspend-side" :onclick "~/.config/eww/scripts/suspend.sh" "")
-          (button :class "logout-side" :onclick "~/.config/eww/scripts/logout.sh" ""))))
+          (button :class "shutdown-side" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout "60s" "")
+          (button :class "reboot-side" :onclick "~/.config/eww/scripts/reboot.sh" :timeout "60s" "")
+          (button :class "lock-side" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout "60s" "")
+          (button :class "suspend-side" :onclick "~/.config/eww/scripts/suspend.sh" :timeout "60s" "")
+          (button :class "logout-side" :onclick "~/.config/eww/scripts/logout.sh" :timeout "60s" ""))))
     (defwidget calendar_full [] 
         (box :orientation "v" :halign "center" :space-evenly "false" 
            (box :class "calendar_title" "     ${day}, ${number_day} ${month_full} ${year_full}")
@@ -70,19 +70,19 @@
         (button :class "search-full" :onclick "~/bin/launcher.sh" "")))
     (defwidget power_full [] 
       (box :orientation "h" :space-evenly "true" 
-        (button :class "power-full" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout 600 "")))
+        (button :class "power-full" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout "60s" "")))
     (defwidget reboot_full [] 
       (box :orientation "h" :space-evenly "true" 
-        (button :class "reboot-full" :onclick "~/.config/eww/scripts/reboot.sh" :timeout 600 "")))
+        (button :class "reboot-full" :onclick "~/.config/eww/scripts/reboot.sh" :timeout "60s" "")))
     (defwidget lock_full [] 
       (box :orientation "h" :space-evenly "true" 
-        (button :class "lock-full" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout 600 "")))
+        (button :class "lock-full" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout "60s" "")))
     (defwidget suspend_full [] 
       (box :orientation "h" :space-evenly "true" 
-        (button :class "suspend-full" :onclick "~/.config/eww/scripts/suspend.sh" :timeout 600 "")))
+        (button :class "suspend-full" :onclick "~/.config/eww/scripts/suspend.sh" :timeout "60s" "")))
     (defwidget logout_full [] 
       (box :orientation "h" :space-evenly "true" 
-        (button :class "logout-full" :onclick "~/.config/eww/scripts/logout.sh" :timeout 600 "")))
+        (button :class "logout-full" :onclick "~/.config/eww/scripts/logout.sh" :timeout "60s" "")))
     (defwidget close_full [] 
       (box :orientation "h" :space-evenly "true" 
         (button :class "power-full" :onclick "~/bin/centerkill" "")))
