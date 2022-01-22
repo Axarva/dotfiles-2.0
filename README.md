@@ -39,7 +39,7 @@
 - **Healthy stuff** ❤️ (Yeah, you get notifications to fix your posture and take a break)
 - *Insert more stuff here*
 
-**A new note**: Yuck is live on the `modified` branch! I'm still not sure if the configs would work as expected (there
+**A new note**: Yuck is live on ~~`modified`~~ both branches! I'm still not sure if the configs would work as expected (there
 have been a few changes), and I would love it if users could test it out and report issues. Thank you so much everyone
 (and eww devs, specially you guys)!
 
