@@ -1,0 +1,301 @@
+
+  
+  (defwidget player [] 
+      (box :orientation "v" :space-evenly "false" 
+              (box :class "musicart" :style "background-image: url('${cover}');" {art})
+              (box :class "musictitle" "${music3}${title}")
+              (box :class "musicartist" "${music2}${artist}")
+        (box :orientation "h" :halign "center" :class "musicbtn" :space-evenly "false" 
+          (button :onclick "playerctl previous" "")
+           (button :onclick "playerctl play-pause" {musicstat})
+          (button :onclick "playerctl next" ""))
+          (box :orientation "h" :class "music-slider" :space-evenly "false" :halign "center" 
+                  (scale :min 0 :max 101 :value {musicpos} :active "false"))))
+    (defwidget smol_calendar [] 
+      (box :orientation "v" :space-evenly "false" 
+        (box :class "number_day" {number_day})
+        (box :class "month" {month})))
+    (defwidget weather_side [] 
+      (box :orientation "h" :space-evenly "false" 
+        (box :class "weather-icon-side" :style "color: ${weather-hex}" {weather-icon})
+        (box :class "weather-info-side" :orientation "v" :space-evenly "false" 
+          (box :class "temperature-side" "${temperature}  ")
+          (box :class "weather-stat-side" {weather-stat-side}))))
+    (defwidget player_side [] 
+      (box :orientation "h" :space-evenly "false" 
+              (box :class "musicart-side" :style "background-image: url('${cover}');" {art})
+        (box :class "musicstuff-side" :orientation "v" :space-evenly "false" 
+                (box :class "musicinfo-side" "${music3}${title}")
+          (box :orientation "h" :halign "center" :class "musicbtn-side" :space-evenly "false" 
+            (button :onclick "playerctl previous" "")
+             (button :class "pause-play-side" :onclick "playerctl play-pause" {musicstat})
+            (button :onclick "playerctl next" "")))))
+    (defwidget time_side [] 
+      (box :orientation "v" :space-evenly "false" 
+        (box :orientation "h" :class "time-side" :space-evenly "true" 
+          (box :class "hour-side" {hour})
+          (box :class "minute-side" {min}))
+        (box :class "day-side" {day})))
+    (defwidget sliders_side [] 
+      (box :orientation "v" :space-evenly "false" :class "sliders-side" 
+        (box :orientation "h" :class "slider-vol-side" :space-evenly "false" 
+          (box :class "label-vol-side" "")
+          (scale :min 0 :max 101 :value {volume} :onchange "amixer -D pulse sset Master {}%"))
+        (box :orientation "h" :class "slider-bright-side" :space-evenly "false" 
+          (box :class "label-bright-side" "")
+          (scale :min 0 :max 101 :value {bright} :onchange "brightnessctl s {}%"))
+        (box :orientation "h" :class "slider-ram-side" :space-evenly "false" 
+          (box :class "label-ram-side" "")
+          (scale :min 0 :active "false" :max 101 :value {ram-used}))
+        (box :orientation "h" :class "slider-battery-side" :space-evenly "false" 
+          (box :class "label-battery-side" {bat-icon})
+          (scale :min 0 :active "false" :max 101 :value {battery-remaining}))))
+    (defwidget sys_side [] 
+      (box :orientation "v" :space-evenly "false" 
+        (button :class "search-side" :onclick "~/bin/launcher.sh" "  Search...")
+        (box :orientation "h" :halign "center" :class "sysbtn" :space-evenly "true" 
+          (button :class "shutdown-side" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout "60s" "")
+          (button :class "reboot-side" :onclick "~/.config/eww/scripts/reboot.sh" :timeout "60s" "")
+          (button :class "lock-side" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout "60s" "")
+          (button :class "suspend-side" :onclick "~/.config/eww/scripts/suspend.sh" :timeout "60s" "")
+          (button :class "logout-side" :onclick "~/.config/eww/scripts/logout.sh" :timeout "60s" ""))))
+    (defwidget calendar_full [] 
+        (box :orientation "v" :halign "center" :space-evenly "false" 
+           (box :class "calendar_title" "     ${day}, ${number_day} ${month_full} ${year_full}")
+           (box :class "calendar" 
+              (calendar :show-details "true")
+    )))
+    (defwidget search_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "search-full" :onclick "~/bin/launcher.sh" "")))
+    (defwidget power_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "power-full" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout "60s" "")))
+    (defwidget reboot_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "reboot-full" :onclick "~/.config/eww/scripts/reboot.sh" :timeout "60s" "")))
+    (defwidget lock_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "lock-full" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout "60s" "")))
+    (defwidget suspend_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "suspend-full" :onclick "~/.config/eww/scripts/suspend.sh" :timeout "60s" "")))
+    (defwidget logout_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "logout-full" :onclick "~/.config/eww/scripts/logout.sh" :timeout "60s" "")))
+    (defwidget close_full [] 
+      (box :orientation "h" :space-evenly "true" 
+        (button :class "power-full" :onclick "~/bin/centerkill" "")))
+    (defwidget profile [] 
+    (box :orientation "v" :space-evenly "false" :class "profile" 
+        (box :orientation "h" :space-evenly "false" 
+          (box :class "pfp"))
+        (box :orientation "v" :space-evenly "false"  
+          (box :class "pfptxt" :valign "center" {whoami})
+          (box :class "subpfptxt" :halign "center" "Configs go brr"))))
+    (defwidget weather [] 
+      (box :orientation "v" :space-evenly "false" 
+        (box :orientation "h" :space-evenly "false" 
+          (box :class "weather-icon" :style "color: ${weather-hex}" {weather-icon})
+          (box :class "temperature" "${temperature}  "))
+        (box :orientation "v" :space-evenly "false" 
+          (box :class "weather-stat" {weather-stat})
+          (box :class "weather-quote-head" {weather-quote})
+          (box :class "weather-quote-tail" {weather-quote2}))))
+     (defwidget home_dir [] 
+      (box :orientation "v" :space-evenly "true" :class "home-dir" 
+        (button :class "l1" :onclick "(thunar ~/${l1})" {l1-processed})
+        (button :class "l2" :onclick "(thunar ~/${l2})" {l2-processed})
+        (button :class "l3" :onclick "(thunar ~/${l3})" {l3-processed})
+        (button :class "l4" :onclick "(thunar ~/${l4})" {l4-processed})
+        (button :class "l5" :onclick "(thunar ~/${l5})" {l5-processed})
+        (button :class "l6" :onclick "(thunar ~/${l6})" {l6-processed})))
+    (defwidget quote [] 
+      (box :orientation "v" :space-evenly "false" :class "quote-box" 
+        (label :class "quote-main" :halign "start" :text "${quote}${quote-gen}" :wrap "true" :width 25)
+        (label :class "quote-tail" :halign "start" :text {quote-tail} :wrap "true" :width 25)
+        (label :class "quote-author" :text "- ${author-quote}" :halign "end")))
+    (defwidget screenshot [] 
+      (box :orientation "v" :space-evenly "true" 
+        (button :class "screenshot-icon" :onclick "msclip -c" :timeout 600 "")))
+    (defwidget vpn [] 
+      (box :orientation "v" :space-evenly "true" 
+              (button :class "vpn-icon" :onclick "~/.config/eww/scripts/vpntoggle" :style "color: ${vpn-hex}" "嬨${getvpnstat}")))
+    (defwidget donotdisturb [] 
+      (box :orientation "v" :space-evenly "true" :halign "center" 
+        (button :class "disturb-icon" :onclick "~/bin/do_not_disturb.sh" :style "color: ${disturb-hex}" "⏾")))
+    (defwidget blur_full [] 
+      (box :orientation "v" :space-evenly "true"))
+;; (defwidget powermenu [] 
+;; (box :orientation "h" :halign "center" :class "sysbtn" :space-evenly "true" 
+;; (button :class "shutdown-side" :onclick "~/.config/eww/scripts/shutdown.sh" :timeout 600 "")
+;; (button :class "reboot-side" :onclick "~/.config/eww/scripts/reboot.sh" :timeout 600 "")
+;; (button :class "lock-side" :onclick "~/.config/eww/scripts/lockscreen.sh" :timeout 600 "")
+;; (button :class "suspend-side" :onclick "~/.config/eww/scripts/suspend.sh" :timeout 600 "")
+;; (button :class "logout-side" :onclick "~/.config/eww/scripts/logout.sh" :timeout 600 "")
+;; (button :class "lock-side" :onclick "exec ~/bin/eww close powermenu" "")
+;;)
+;;)
+
+  
+
+  
+    ;; Music vars
+    (defpoll music :interval "5s"  "playerctl metadata --format '{{ artist }} - {{ title }}'")
+    (defpoll music2 :interval "10h"  "~/.config/eww/scripts/getartist")
+    (defpoll music3 :interval "10h"  "~/.config/eww/scripts/gettitle")
+    (defpoll art :interval "10h"  "~/.config/eww/scripts/getart")
+    (defpoll volume :interval "16ms"  "~/.config/eww/scripts/getvol")
+    (defpoll bright :interval "16ms"  "~/.config/eww/scripts/getbri")
+    (defpoll musicstat :interval "1s"  "~/bin/spotifystatus")
+    (defpoll cover :interval "2s"  "~/.config/eww/scripts/echoart")
+    (defpoll title :interval "1s"  "~/.config/eww/scripts/echotitle")
+    (defpoll artist :interval "1s"  "cat /tmp/xmonad/spotify/artist")
+    (defpoll musicpos :interval "16ms"  "~/.config/eww/scripts/getposition")
+    ;; Date vars
+    (defpoll number_day :interval "5h"  "date \"+%d\"")
+    (defpoll month :interval "10h"  "date \"+%b\"")
+    (defpoll min :interval "10s"  "date \"+%M\"")
+    (defpoll hour :interval "10s"  "date \"+%H\"")
+    (defpoll day :interval "15h"  "~/.config/eww/scripts/getday")
+    (defpoll month_full :interval "15h"  "date \"+%B\"")
+    (defpoll year_full :interval "15h"  "date \"+%Y\"")
+
+    ;; Weather vars
+    (defpoll weather-icon :interval "20m"  "cat /tmp/xmonad/weather/weather-icon")
+    (defpoll temperature :interval "20m"  "cat /tmp/xmonad/weather/weather-degree")
+    (defpoll weather-hex :interval "20m"  "cat /tmp/xmonad/weather/weather-hex")
+    (defpoll weather-quote :interval "20m"  "~/.config/eww/scripts/getwethquote")
+    (defpoll weather-quote2 :interval "20m"  "~/.config/eww/scripts/getwethquote2")
+    (defpoll weather-stat :interval "20m"  "cat /tmp/xmonad/weather/weather-stat")
+    (defpoll weather-stat-side :interval "20m"  "~/.config/eww/scripts/weather-trimmer")
+
+    ;; Do not disturb var
+    (defpoll disturb-hex :interval "1s"  "cat /tmp/xmonad/donotdisturb/color")
+    ;; Your Name (not the anime movie, sadly)
+    (defpoll whoami :interval "50h" "whoami")
+
+    ;; Big brain RAM vars
+    (defpoll ram-used :interval "1s"  "~/.config/eww/scripts/getram")
+
+    ;; Battery charge vars
+    (defpoll battery-remaining :interval "5s"  "cat /sys/class/power_supply/BAT0/capacity")
+    (defpoll bat-icon :interval "5s"  "~/.config/tint2/scripts/battery.sh")
+
+    ;; Home-dir stuff
+    (defpoll l1-processed :interval "20h"  "~/.config/eww/scripts/home-dir/l1-processed")
+    (defpoll l2-processed :interval "20h"  "~/.config/eww/scripts/home-dir/l2-processed")
+    (defpoll l3-processed :interval "20h"  "~/.config/eww/scripts/home-dir/l3-processed")
+    (defpoll l4-processed :interval "20h"  "~/.config/eww/scripts/home-dir/l4-processed")
+    (defpoll l5-processed :interval "20h"  "~/.config/eww/scripts/home-dir/l5-processed")
+    (defpoll l6-processed :interval "20h"  "~/.config/eww/scripts/home-dir/l6-processed")
+    (defpoll l1 :interval "20h"  "~/.config/eww/scripts/home-dir/l1")
+    (defpoll l2 :interval "20h"  "~/.config/eww/scripts/home-dir/l2")
+    (defpoll l3 :interval "20h"  "~/.config/eww/scripts/home-dir/l3")
+    (defpoll l4 :interval "20h"  "~/.config/eww/scripts/home-dir/l4")
+    (defpoll l5 :interval "20h"  "~/.config/eww/scripts/home-dir/l5")
+    (defpoll l6 :interval "20h"  "~/.config/eww/scripts/home-dir/l6")
+
+
+    ;; Quote vars
+    (defpoll author-quote :interval "10m"  "cat /tmp/xmonad/quotes/author")
+    (defpoll quote :interval "10m"  "cat /tmp/xmonad/quotes/quote")
+    (defpoll quote-gen :interval "30m"  "~/.config/eww/scripts/quotes")
+    (defpoll quote-tail :interval "10m"  "cat /tmp/xmonad/quotes/quote-tail")
+
+    ;; Vpn stats
+    (defpoll getvpnstat :interval "10s"  "~/.config/eww/scripts/getvpnstat")
+    (defpoll vpn-hex :interval "1s"  "cat /tmp/xmonad/vpnstat-hex")
+
+  
+
+  
+    ;; Sidebar stuff
+
+    (defwindow smol_calendar 
+			    :geometry (geometry :x "10px" :y "45px" :width "80px" :height "80px")
+			     				(smol_calendar))
+    (defwindow weather_side 
+			    :geometry (geometry :x "95px" :y "45px" :width "215px" :height "80px")
+			     				(weather_side))
+    (defwindow player_side 
+			    :geometry (geometry :x "10px" :y "270px" :width "300px" :height "122px")
+			     				(player_side))
+    (defwindow time_side 
+			    :geometry (geometry :x "10px" :y "130px" :width "300px" :height "135px")
+			     				(time_side))
+    (defwindow sliders_side 
+			    :geometry (geometry :x "10px" :y "397px" :width "300px" :height "205px")
+			     				(sliders_side))
+    (defwindow sys_side 
+			    :geometry (geometry :x "10px" :y "607px" :width "300px" :height "153px")
+			     				(sys_side))
+
+    ;; Main Stuff
+    ;; (defwindow calendar_full 
+    ;;		    :geometry (geometry :x "505px" :y "100px" :width "690px" :height "100px")
+			     
+				;; 
+;; 
+;; (calendar_full)
+;; 
+;;)
+    (defwindow search_full 
+			    :geometry (geometry :x "173px" :y "534px" :width "100px" :height "110px")
+			     				(search_full))
+    (defwindow power_full 
+			    :geometry (geometry :x "1093px" :y "124px" :width "100px" :height "100px")
+			     				(power_full))
+     (defwindow reboot_full 
+			    :geometry (geometry :x "1093px" :y "229px" :width "100px" :height "100px")
+			     				(reboot_full))
+     (defwindow lock_full 
+			    :geometry (geometry :x "1093px" :y "334px" :width "100px" :height "100px")
+			     				(lock_full))
+     (defwindow suspend_full 
+			    :geometry (geometry :x "1093px" :y "439px" :width "100px" :height "100px")
+			     				(suspend_full))
+     (defwindow logout_full 
+			    :geometry (geometry :x "1093px" :y "544px" :width "100px" :height "100px")
+			     				(logout_full))
+     (defwindow close_full 
+			    :geometry (geometry :x "633px" :y "649px" :width "100px" :height "100px")
+			     				(close_full))
+     (defwindow player 
+			    :geometry (geometry :x "1056px" :y "336px" :width "300px" :height "424px")
+			     				(player))
+    (defwindow profile 
+			    :geometry (geometry :x "173px" :y "124px" :width "300px" :height "405px")
+			     				(profile))
+     (defwindow weather 
+			    :geometry (geometry :x "478px" :y "124px" :width "405px" :height "300px")
+			     				(weather))
+     (defwindow home_dir 
+			    :geometry (geometry :x "888px" :y "229px" :width "200px" :height "415px")
+			     				(home_dir))
+    (defwindow quote 
+			    :geometry (geometry :x "278px" :y "534px" :width "605px" :height "110px")
+			     				(quote))
+     (defwindow screenshot 
+			    :geometry (geometry :x "888px" :y "124px" :width "200px" :height "100px")
+			     				(screenshot))
+    (defwindow vpn-icon 
+			    :geometry (geometry :x "478px" :y "429px" :width "200px" :height "100px")
+			     				(vpn))
+    (defwindow disturb-icon 
+			    :geometry (geometry :x "683px" :y "429px" :width "200px" :height "100px")
+			     				(donotdisturb))
+    (defwindow blur_full 
+			    :geometry (geometry :x "0px" :y "0px" :width "100%" :height "100%")
+      							(blur_full))
+
+
+;; (defwindow powermenu :focusable "true" 
+;;		    :geometry (geometry :x "35%" :y "20%" :width "30%" :height "40%")
+;;			     
+;; 
+;; 
+;; (powermenu)
+;; 
+;;)
+
