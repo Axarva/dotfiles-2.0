@@ -233,7 +233,7 @@
 
     ;; Main Stuff
     ;; (defwindow calendar_full 
-			    :geometry (geometry :x "505px" :y "100px" :width "690px" :height "100px")
+			  ;;  :geometry (geometry :x "505px" :y "100px" :width "690px" :height "100px")
 			     
 				;; 
 ;; 
