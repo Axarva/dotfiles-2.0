@@ -219,16 +219,16 @@
 			    :geometry (geometry :x "95px" :y "45px" :width "215px" :height "80px")
 			     				(weather_side))
     (defwindow player_side 
-			    :geometry (geometry :x "10px" :y "270px" :width "300px" :height "110px")
+			    :geometry (geometry :x "10px" :y "270px" :width "300px" :height "122px")
 			     				(player_side))
     (defwindow time_side 
 			    :geometry (geometry :x "10px" :y "130px" :width "300px" :height "135px")
 			     				(time_side))
     (defwindow sliders_side 
-			    :geometry (geometry :x "10px" :y "385px" :width "300px" :height "205px")
+			    :geometry (geometry :x "10px" :y "397px" :width "300px" :height "205px")
 			     				(sliders_side))
     (defwindow sys_side 
-			    :geometry (geometry :x "10px" :y "595px" :width "300px" :height "153px")
+			    :geometry (geometry :x "10px" :y "607px" :width "300px" :height "153px")
 			     				(sys_side))
 
     ;; Main Stuff
