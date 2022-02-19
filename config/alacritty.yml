@@ -4,6 +4,7 @@ env:
   TERM: alacritty
 
 window:
+  opacity: 1.0
   padding:
     x: 25
     y: 25
@@ -66,8 +67,6 @@ colors:
     - { index: 19, color: '0x353535' }
     - { index: 20, color: '0xb2ccd6' }
     - { index: 21, color: '0xeeffff' }
-
-background_opacity: 1
 
 # cursor:
 #   style: Underline
