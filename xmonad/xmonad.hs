@@ -137,6 +137,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_z     ), spawn "exec ~/bin/inhibit_activate")
     , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/inhibit_deactivate")
     , ((modm .|. shiftMask, xK_a     ), clipboardy)
+    -- Turn do not disturb on and off
+    , ((modm,               xK_d     ), spawn "exec ~/bin/do_not_disturb.sh")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
