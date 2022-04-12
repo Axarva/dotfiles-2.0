@@ -10,6 +10,9 @@
   <a href="https://github.com/Axarva/dotfiles-2.0/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange.svg?color=90c861&style=for-the-badge&logo=mitsubishi"></a>
 </p>
 
+## A Note:
+Due to my Cambridge A-Level Exams in May/June 2022, I will not be active regularly. Of course, I haven't really been available even before I created this note, but I just wanted to let everyone know. This DOES NOT mean the repository is dead, I will be back here near the end of June. Any inconvenience is regretted. Thank you for all your support!
+
 ## Table of Contents
 
 - [About ⁉️](#about)
