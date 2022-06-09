@@ -1,0 +1,9 @@
+#!/bin/bash
+quote=$(cat /tmp/xmonad/quotes/quote)
+qc=$(cat /tmp/xmonad/quotes/quote | wc -c)
+if [ "$qc" -le 58 ]; then
+	echo "" > /tmp/xmonad/quotes/quote-tail
+else 
+	printf '%s\n' "${quote:0:${#quote}/2}" > /tmp/xmonad/quotes/quote
+	printf '%s\n' "${quote:${#quote}/2}" > /tmp/xmonad/quotes/quote-tail
+fi

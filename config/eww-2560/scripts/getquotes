@@ -1,0 +1,7 @@
+#!/bin/bash
+tmp_dir="/tmp/xmonad/quotes"
+
+if [ ! -d $tmp_dir ]; then
+        mkdir -p $tmp_dir
+fi
+cp ~/.config/eww/scripts/quotes.json /tmp/xmonad/quotes/ && exec  ~/.config/eww/scripts/quotes

@@ -1,0 +1,484 @@
+* {
+  all: unset;
+}
+
+window {
+  background-color: #121212;
+  color: #ffd5cd;
+  font-family: Museo Sans;
+}
+
+button {
+  all: unset;
+  background-color: #121212;
+  padding: 10px;
+}
+
+.musicart {
+  background-size: 260px;
+  min-height: 260px;
+  min-width: 260px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.musictitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.musicartist {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.musicbtn button {
+  font-size: 12px;
+}
+
+.musicbtn button:hover {
+  color: #D35D6E;
+}
+
+.music-slider scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 5px;
+  min-width: 240px;
+  margin-bottom: 20px;
+}
+
+.music-slider scale trough highlight {
+  all: unset;
+  background-color: #ffd5cd;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.music-slider slider {
+  all: unset;
+  color: #ffd5cd;
+}
+
+.number_day {
+  padding-top: 10px;
+  font-size: 35px;
+  color: #D35D6E;
+}
+
+.month {
+  font-weight: bold;
+}
+
+.weather-icon-side {
+  font-size: 45px;
+  font-family: Iosevka;
+  margin: 5px 30px 5px 30px;
+}
+
+.weather-stat-side {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #D35D6E;
+}
+
+.temperature-side {
+  font-size: 16px;
+  font-weight: 900;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.musicart-side {
+  background-size: 92px;
+  min-height: 90px;
+  min-width: 90px;
+  margin: 15px 5px 15px 15px;
+  border-radius: 6px;
+}
+
+.musicinfo-side {
+  font-size: 15px;
+  margin-top: 25px;
+  margin-left: 5px;
+  font-weight: bold;
+  // margin: 20px;
+  border-radius: 10px;
+  // border: 1px solid white;
+  min-width: 40px;
+}
+
+.musicbtn-side {
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+}
+
+.musicbtn-side button {
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.musicbtn-side button:hover {
+  color: #D35D6E;
+}
+
+.pause-play-side {
+  color: #D35D6E;
+}
+
+.pause-play-side:hover {
+  color: #ffd5cd;
+}
+
+.time-side {
+  margin: 20px 65px 0 65px;
+  font-size: 60px;
+}
+
+.minute-side {
+  color: #D35D6E;
+}
+
+.day-side {
+  font-size: 16px;
+  font-weight: bold;
+  color: #90c861;
+}
+
+
+.sliders-side slider {
+  all: unset;
+  color: #ffd5cd;
+}
+
+.slider-vol-side {
+  margin-top: 10px;
+}
+
+.slider-vol-side scale trough highlight {
+  all: unset;
+  background-color: #c47eb7;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.slider-bright-side scale trough highlight {
+  all: unset;
+  background-color: #84afdb;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.slider-ram-side scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.slider-battery-side scale trough highlight {
+  all: unset;
+  background-color: #90c861;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.slider-vol-side scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.slider-bright-side scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 16px;
+}
+
+.slider-ram-side scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 17px;
+}
+
+.slider-battery-side scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+
+.label-battery-side, .label-bright-side, .label-ram-side, .label-vol-side {
+  margin-top: 10px;
+  font-family: Iosevka;
+  margin-left: 35px;
+  font-size: 25px;
+}
+
+.label-bright-side {
+  color: #84afdb;
+}
+
+.label-ram-side {
+  font-size: 30px;
+  color: #D35D6E;
+}
+
+.label-battery-side {
+  font-size: 18px;
+  color: #90c861;
+}
+
+.label-vol-side {
+  color: #c47eb7;
+}
+
+.search-side {
+  border-radius: 12px;
+  background-color: #272626;
+  margin: 20px 30px 20px 30px;
+}
+
+.search-side:hover {
+  color: #D35D6E;
+}
+
+.sysbtn button {
+  font-size: 30px;
+}
+
+.shutdown-side ~ button:hover {
+  color: #D35D6E;
+}
+
+.shutdown-side {
+  color: #D35D6E;
+}
+
+.shutdown-side:hover {
+  color: #ffd5cd;
+}
+
+.reboot-side {
+  color: #84afdb;
+}
+
+.lock-side {
+  color: #ffd5cd;
+}
+
+.suspend-side {
+  color: #c47eb7;
+}
+
+.logout-side {
+  color: #90c861;
+}
+
+.calendar_title {
+  margin: 20px 20px 0 20px;
+  font-size: 16px;
+}
+
+.search-full {
+  font-size: 60px;
+  margin-right: 5px;
+}
+
+.search-full:hover {
+  color: #D35D6E;
+}
+
+.power-full {
+  font-size: 60px;
+  color: #D35D6E;
+}
+
+.power-full:hover {
+  color: #ffd5cd;
+}
+
+.reboot-full {
+  font-size: 60px;
+  color: #84afdb
+}
+
+.reboot-full:hover {
+  color: #D35D6E
+}
+
+.lock-full {
+  font-size: 60px;
+  color: #ffd5cd
+}
+
+.lock-full:hover {
+  color: #D35D6E
+}
+
+.suspend-full {
+  font-size: 60px;
+  color: #c47eb7
+}
+
+.suspend-full:hover {
+  color: #D35D6E
+}
+
+.logout-full {
+  font-size: 60px;
+  color: #90c861
+}
+
+.logout-full:hover {
+  color: #D35D6E
+}
+
+.pfp {
+  background-image: url("$HOME/.config/eww/images/eww.png");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: center;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 80px 20px 0 65px;
+  border-radius: 500px;
+}
+
+.pfptxt {
+  margin-top: 100px;
+  color: #D35D6E;
+  font-size: 36px;
+}
+
+.subpfptxt {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.weather-icon {
+  font-size: 120px;
+  margin-left: 40px;
+  font-family: Iosevka;
+}
+
+.weather-stat {
+  font-size: 30px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-weight: bold;
+  color: #D35D6E;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.weather-quote {
+  margin: 25px 10px 40px 10px;
+  font-size: 20px;
+}
+
+.weather-quote-head, .weather-quote-tail {
+  font-size: 18px;
+  // font-weight: bold;
+  // color: #90c861
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.home-dir {
+  margin: 10px;
+}
+
+.l1:hover, .l3:hover, .l4:hover, .l6:hover {
+  color: #D35D6E;
+}
+
+.l1, .l6 {
+  color: #84afdb;
+}
+
+.l2, .l5 {
+  color: #ffd5cd;
+}
+
+.l3, .l4 {
+  color: #c47eb7;
+}
+
+.l5:hover, .l2:hover {
+  color: #D35D6E;
+}
+
+.quote-main {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  // margin-bottom: 20px;
+  margin-left: 20px;
+  color: #A5b3c0;
+}
+
+.quote-author {
+  font-size: 18px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  color: #84afdb;
+}
+
+.quote-tail {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  color: #A5b3c0;
+}
+
+.screenshot-icon {
+  color: #ffd5cd;
+  font-size: 80px;
+  margin-right: 15px;
+  font-family: Iosevka;
+}
+
+.vpn-icon {
+  font-size: 80px;
+  margin-right: 5px;
+}
+
+.vpn-icon:hover {
+  color: #ffd5cd;
+}
+
+.disturb-icon {
+  font-size: 80px;
+}
+
+.disturb-icon:hover {
+  color: #ffd5cd;
+}
