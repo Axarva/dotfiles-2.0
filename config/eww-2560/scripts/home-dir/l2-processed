@@ -1,0 +1,10 @@
+#!/bin/bash
+var=$(ls ~/ | awk '{print $1}' | head -n2 | tail -n1 | sed -e "s/\b\(.\)/\u\1/g") 
+count=$(echo $var | wc -c)
+
+
+if [ "$count" -lt 11 ]; then
+	echo $var
+else
+	echo $(echo $var | cut -c1-7)...
+fi

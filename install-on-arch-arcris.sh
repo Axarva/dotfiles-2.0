@@ -53,7 +53,8 @@ mkdir -p ~/.config/
             --no-collapse --cr-wrap --column-separator "|" --no-tags --ok-label '< Seleccionar >' --nocancel --menu "Selecciona una opción para GNOME \n\n" 10 60 19)
 
             options=(1 "1366x768"
-                     2 "1920x1080")
+                     2 "1920x1080"
+                     3 "2560x1440")
 
             choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 
@@ -63,6 +64,8 @@ mkdir -p ~/.config/
                 1) EWW_DIR='config/eww-1366'
                    ;;
                 2) EWW_DIR='config/eww-1920'
+                   ;;
+                3) EWW_DIR='config/eww-2560'
                    ;;
                 esac
             done

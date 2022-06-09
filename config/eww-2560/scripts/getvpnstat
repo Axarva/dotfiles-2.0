@@ -1,0 +1,8 @@
+#!/bin/bash
+status=$(protonvpn status | head -n1 | awk '{print $2}')
+
+if [ "$status" == "Connected" ]; then 
+	echo "#90c861" > /tmp/xmonad/vpnstat-hex
+else 
+	echo "#D35D6E" > /tmp/xmonad/vpnstat-hex
+fi
