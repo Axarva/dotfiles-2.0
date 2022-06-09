@@ -1,2 +1,0 @@
-#!/bin/bash
-echo $(ls ~/ | awk '{print $1}' | head -n6 | tail -n1)
