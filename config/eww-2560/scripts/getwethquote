@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-echo -e $(cat /tmp/xmonad/weather/weather-quote) | head -n1
