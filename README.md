@@ -1,6 +1,6 @@
 <img src='/screenshots/yeeyee.jpg'>
 
-<h1 align="center">🚀✨ Widgets go brr! ✨🚀</h1>
+<h1 align="center">✨ Widgets go brr! ✨</h1>
 
 
 <p align="center">
@@ -10,8 +10,7 @@
   <a href="https://github.com/Axarva/dotfiles-2.0/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange.svg?color=90c861&style=for-the-badge&logo=mitsubishi"></a>
 </p>
 
-## A Note:
-Due to my Cambridge A-Level Exams in May/June 2022, I will not be active regularly. Of course, I haven't really been available even before I created this note, but I just wanted to let everyone know. This DOES NOT mean the repository is dead, I will be back here near the end of June. Any inconvenience is regretted. Thank you for all your support!
+## ~~A Note:~~ I'm back.
 
 ## Table of Contents
 
@@ -155,6 +154,7 @@ $ git clone https://github.com/Axarva/dotfiles-2.0.git
 $ cd ./dotfiles-2.0
 $ chmod +x ./install-on-arch.sh
 $ ./install-on-arch.sh
+$ sudo ln -s /usr/lib/libasan.so.8 /usr/lib/libasan.so.6 #This is here for tint2 to work.
 ```
 
 
@@ -232,11 +232,7 @@ And here we are:
 5. Fonts: GET THOSE FONTS!
 6. **MAKE SURE YOUR `~/bin` DIRECTORY IS IN YOUR PATH, OR NOTHING WILL WORK!** (Yes. Absolutely needs to be shouty capitals.)
 7. For instructions regarding use on VirtualMachine, please do check the `VM` folder of this repository.
-8. ~~Workspace indicator bar lost colors: This has a very long explanation, but the fix is as follows:~~
-   - ~~Open up the `~/.config/tint2/workspaces.tint2rc` file, and scroll down to the taskbar module at around line 120~~
-   - ~~Add this line in that block: `taskbar_name_unoccupied_font_color = #ffd5cd 100`~~
-   - ~~Save the file, and refresh the bar with hitting the keybind `Win + B` twice.~~
-   - ~~Remember not to edit that particular file with `tint2conf`, or you'll have to do this again!~~
+8. Bars not showing on Arch Linux: `sudo ln -s /usr/lib/libasan.so.8 /usr/lib/libasan.so.6`
 9. The workspace indicator bar issue has been solved through the binaries in my fork.
 10. Anything else? Open up an issue.
    
