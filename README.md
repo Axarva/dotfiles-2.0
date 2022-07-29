@@ -33,7 +33,7 @@
 
 - **Note:** Check out the `modified` branch for a newer setup. Hope you like it!
 - **xmonad** ⚽ 
-- **eww** 🤢
+- **eww** (Very wacky)
 - **firefox** 🦊
 - **rofi** 💈
 - **tint2 ([This](https://github.com/Axarva/tint2-1) fork is the only supported fork.)** 🍫
@@ -41,17 +41,13 @@
 - **Healthy stuff** ❤️ (Yeah, you get notifications to fix your posture and take a break)
 - *Insert more stuff here*
 
-**A new note**: Yuck is live on ~~`modified`~~ both branches! I'm still not sure if the configs would work as expected (there
-have been a few changes), and I would love it if users could test it out and report issues. Thank you so much everyone
-(and eww devs, specially you guys)!
-
 Hello! Thank you for dropping by! 👋
 
 These are my xmonad configurations, and they go brr! 🚀 (Let's stop that there).
 
 If you're here, I suppose you want to be cloning this configuration, for which look at the Installation Section below. 👇 
 
-Even if you're not, just look through the gallery 📷:
+Even if you're not, just look through the gallery:
 
 
 
@@ -146,7 +142,7 @@ And please follow these next few steps as well:
 
 ### For Arch Linux and it's derivatives (make sure you have git installed): 🌇
 
-Note: THIS MAKES BACKUPS TOO, SO YEAH. JUST DO IT. DO IT!
+THIS MAKES BACKUPS TOO, SO YEAH. JUST DO IT. DO IT!
 
 
 ```bash
@@ -159,7 +155,7 @@ $ sudo ln -s /usr/lib/libasan.so.8 /usr/lib/libasan.so.6 #This is here for tint2
 
 
 
-That'll do the basic stuff. For a complete kang (kang means copying, don't mind my jargon), look at the list of dependencies below.
+That'll do the basic stuff. For a complete copy, look at the list of dependencies below.
 
 AND DON'T FORGET TO READ WHAT'S WRITTEN AT THE END OF THE MAIN INSTALLATION SECTION [UP THERE](#inst). Further steps are specified there. (Yes. Absolutely needs to be shouty capitals.)
 
@@ -168,10 +164,9 @@ AND DON'T FORGET TO READ WHAT'S WRITTEN AT THE END OF THE MAIN INSTALLATION SECT
 <a id="other"></a>
 
 ### For Gentoo Linux users (And basically any other distro): 🚂
-I'm sorry guys, I couldn't do it. I'm having a mental breakdown rn.
+I'm sorry I couldn't do it. You'll have to manually install dependencies.
 
 **Piece of good advice**:  If you use `systemd`, go ahead and ignore this, and skip to [Going ahead: Others Edition](#ga-other).
-
 
 
 In case you use something else, I recommend opening this repository in a text editor after you clone it, and global-replace the stuff that suits your system. After that, go ahead with [Going ahead: Others Edition](#ga-other).
@@ -179,7 +174,7 @@ In case you use something else, I recommend opening this repository in a text ed
 <a id="ga-other"></a>
 
 #### Going Ahead: Others Edition
-You need to install the dependencies yourself, this script will add the fonts and the configs (AND BACK UP EXISTING ONES TOO, FOR GOD'S SAKE DON'T BE SO PARANOID):
+You need to install the dependencies yourself, this script will add the fonts and the configs (and back up existing ones too):
 
 
 ```bash
@@ -192,21 +187,20 @@ $ ./install-on-gentoo.sh
 AND DON'T FORGET TO READ WHAT'S WRITTEN AT THE END OF THE MAIN INSTALLATION SECTION [UP THERE](#inst). Further steps are specified there. (Yes. Absolutely needs to be shouty capitals.)
 <a id="deps"></a>
 ## Dependencies 📊
-Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
+Here you go. Make sure you have em all.
 
 
-
--    xmonad (OF COURSE, DUH)
--    eww (ElKowar's Wacky Widgets, binary included, but I encourage you to build it yourself and put the binary in your ~/bin). [Link](https://github.com/elkowar/eww)
--    firefox (Yup)
+-    xmonad
+-    [eww](https://github.com/elkowar/eww) (ElKowar's Wacky Widgets, binary included, but I encourage you to build it yourself and put the binary in your ~/bin).
+-    firefox (Not exactly a dependency)
 -    rofi version 1.7.0 (Configs originally come from @adi1090x, been edited by me).
 -    tint2 (Please use [this fork](https://github.com/Axarva/tint2-1) ONLY, or issues will occur. Binaries provided already.)
 -    acpi
 -    Museo Sans Font by Adobe (I think it needs some sort of acount, but get it) Or just search for it on the web and get it somewhere
--    Nerd Font. I include some, but you can use any of your choice. [Link](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) 
+-    [Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) (I include some, but you can use any of your choice.)
 -    playerctl
--    brightnessctl. [Link](https://github.com/Hummer12007/brightnessctl)
--    candy-icons. [Link](https://github.com/EliverLara/candy-icons)
+-    [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+-    [candy-icons](https://github.com/EliverLara/candy-icons)
 -    dunst
 -    Spotify (for cover art, else edit the eww/scripts/getart script accordingly)
 -    An OpenWeatherMap Account, (view eww/scripts/getweather script for more info)
@@ -225,7 +219,7 @@ Ahhhhh the other main stuff. Here you go, peeps. Make sure you have em all.
 And here we are:
 
 
-1. If xmonad doesn't build make sure you have `xmonad-contrib`
+1. If xmonad doesn't build make sure you have the `xmonad-contrib` package.
 2. Bar looks weird: Try editing it a bit using `~/bin/tint2conf`. 
 3. Alacritty configs are faulty: I'm not sure about this one, works perfectly fine for me. 
 4. Widgets positioning weird: I hardcoded them for a 1366x768 screen, will create others if I can
