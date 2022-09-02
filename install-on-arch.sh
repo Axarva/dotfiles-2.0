@@ -83,7 +83,12 @@ $HELPER -S picom-jonaburg-git\
 	   xautolock         \
 	   betterlockscreen
 
-sudo ln -s /usr/lib/libasan.so.8 /usr/lib/libasan.so.6 # Hack to make tint2 work for now.
+
+# Hack to make tint2 work for now.
+if ! [ -f /usr/lib/libasan.so.6 ]; then
+    sudo ln -s /usr/lib/libasan.so.8 /usr/lib/libasan.so.6 
+fi
+
 
 #install custom picom config file 
 mkdir -p ~/.config/
