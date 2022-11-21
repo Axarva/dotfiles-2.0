@@ -5,6 +5,7 @@
   background:      #121212ff;
   selected:      #ffd5cdff;
   foreground:      #eeeeeeff;
+  border:  #00000000
   ac:      #ea907aff;
   red:     #D35D6Eff;
   green:   #90c861ff;
