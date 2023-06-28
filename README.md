@@ -96,6 +96,7 @@ These are the basic keybinds. Read through the `xmonad/xmonad.hs` file for more 
 | `Win + K`              | Navigate through windows                 |
 | `Win + Space`          | Switch through layouts                   |
 | `Win + T`              | Make a floating window tiled             |
+| `Win + F`              | Toggle FullScreen (FullScreen on/off)    |
 
 Note: `Toggling` means to enable if inactive or to disable if active.
 
