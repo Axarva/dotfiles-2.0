@@ -68,7 +68,7 @@ then
 	(cd ~/.srcs/$HELPER/ && makepkg -si )
 fi
 
-git clone https://github.com/jonaburg/picom
+git clone https://github.com/jonaburg/picom ~/.srcs/picom
 (cd ~/.srcs/picom/ && makepkg -si )
 
 $HELPER -S \
