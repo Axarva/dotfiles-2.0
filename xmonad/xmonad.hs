@@ -29,6 +29,7 @@ import XMonad.Layout.Gaps
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import Data.Maybe (maybeToList)
+import XMonad.Util.ActionCycle
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
@@ -97,7 +98,8 @@ ewwclose = spawn "exec ~/bin/eww close-all"
 maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-send \"Screenshot\" \"Copied to Clipboard\" -i flameshot"
 maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send \"Screenshot\" \"Saved to Desktop\" -i flameshot"
 rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\" "
-
+inhibit = spawn "exec ~/bin/inhibit_activate"
+dehibit = spawn "exec ~/bin/inhibit_deactivate"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
@@ -109,12 +111,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch rofi and dashboard
     , ((modm,               xK_o     ), rofi_launcher)
-    , ((modm,               xK_p     ), centerlaunch)
-    , ((modm .|. shiftMask, xK_p     ), ewwclose)
+    , ((modm,               xK_p     ), cycleAction "centerlaunch" [centerlaunch, ewwclose])
 
     -- launch eww sidebar
-    , ((modm,               xK_s     ), sidebarlaunch)
-    , ((modm .|. shiftMask, xK_s     ), ewwclose)
+    , ((modm,               xK_s     ), cycleAction "sidebarlaunch" [sidebarlaunch, ewwclose])
 
     -- Audio keys
     , ((0,                    xF86XK_AudioPlay), spawn "playerctl play-pause")
@@ -134,8 +134,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- My Stuff
     , ((modm,               xK_b     ), spawn "exec ~/bin/bartoggle")
-    , ((modm,               xK_z     ), spawn "exec ~/bin/inhibit_activate")
-    , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/inhibit_deactivate")
+    , ((modm,               xK_z     ), cycleAction "inhibit" [inhibit, dehibit])
     , ((modm .|. shiftMask, xK_a     ), clipboardy)
     -- Turn do not disturb on and off
     , ((modm,               xK_d     ), spawn "exec ~/bin/do_not_disturb.sh")
