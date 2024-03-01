@@ -68,7 +68,10 @@ then
 	(cd ~/.srcs/$HELPER/ && makepkg -si )
 fi
 
-$HELPER -S picom-jonaburg-git\
+git clone https://github.com/jonaburg/picom ~/.srcs/picom
+(cd ~/.srcs/picom/ && makepkg -si )
+
+$HELPER -S \
 	   acpi              \
 	   candy-icons-git   \
 	   wmctrl            \
@@ -82,6 +85,8 @@ $HELPER -S picom-jonaburg-git\
 	   rofi-greenclip    \
 	   xautolock         \
 	   betterlockscreen
+
+
 
 
 # Hack to make tint2 work for now.
