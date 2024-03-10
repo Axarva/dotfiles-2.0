@@ -98,6 +98,13 @@ maimcopy = spawn "maim -s | xclip -selection clipboard -t image/png && notify-se
 maimsave = spawn "maim -s ~/Desktop/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send \"Screenshot\" \"Saved to Desktop\" -i flameshot"
 rofi_launcher = spawn "rofi -no-lazy-grab -show drun -modi run,drun,window -theme $HOME/.config/rofi/launcher/style -drun-icon-theme \"candy-icons\" "
 
+-- FullScreen Support
+toggleFull = withFocused (\windowId -> do
+    { floats <- gets (W.floating . windowset);
+        if windowId `M.member` floats
+        then withFocused $ windows . W.sink
+        else withFocused $ windows . (flip W.float $ W.RationalRect 0 0 1 1) })
+
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
@@ -106,6 +113,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- lock screen
     , ((modm,               xK_F1    ), spawn "betterlockscreen -l")
+
+    -- Full Screen
+    , ((modm,               xK_f    ), toggleFull)
 
     -- launch rofi and dashboard
     , ((modm,               xK_o     ), rofi_launcher)
